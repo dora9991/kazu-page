@@ -1,0 +1,9 @@
+# 公開するのは、ページ本体と画像だけ（中身の元・組み立て・確認・設計メモは公開しない）
+*
+!.gitignore
+!.nojekyll
+!index.html
+!style.css
+!script.js
+!assets/
+!assets/**
