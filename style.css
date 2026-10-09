@@ -273,3 +273,48 @@ a:focus-visible { outline: 2px solid #947039; outline-offset: 5px; }
 @media (prefers-reduced-motion: reduce) {
   *,*::before,*::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* ---- 2026-10-10 追加：歩みの折りたたみ・すでに出している本・YouTube ---- */
+.prelude { margin: 40px 0 8px; border-top: 1px solid #c4bfd0; border-bottom: 1px solid #c4bfd0; }
+.prelude summary { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; min-height: 56px; padding: 14px 40px 14px 0; position: relative; cursor: pointer; list-style: none; }
+.prelude summary::-webkit-details-marker { display: none; }
+.prelude summary::after { content: "＋"; position: absolute; right: 4px; top: 50%; transform: translateY(-50%); font: 400 20px/1 var(--serif); color: #5b5470; }
+.prelude[open] summary::after { content: "－"; }
+.prelude summary:focus-visible { outline: 2px solid #5b5470; outline-offset: 2px; }
+.prelude__label { font: 600 18px/1.6 var(--serif); }
+.prelude__note { font-size: 13px; color: #626072; }
+.journey__list--prelude { margin: 8px 0 28px; }
+.journey__list--prelude .journey__title { font-size: 19px; }
+
+.sub-title { font: 600 22px/1.6 var(--serif); margin: 0 0 20px; }
+.sub-title--drafts { margin-top: 64px; margin-bottom: 8px; }
+.sub-lead { color: #5e6270; font-size: 14px; margin: 0 0 28px; }
+.published { margin-bottom: 8px; }
+.pub { display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 40px; align-items: center; padding: 32px 36px 34px 39px; border-left: 3px solid #82979b; background: #efede6; box-shadow: 3px 3px 0 #dedbd2; }
+.pub__status { font-size: 12px; color: #675b49; letter-spacing: .1em; margin: 0; }
+.pub__name { font: 600 30px/1.5 var(--serif); margin: 14px 0 12px; }
+.pub__name small { font: 400 14px "Zen Kaku Gothic New", sans-serif; margin-left: 10px; color: #5e6270; }
+.pub__text { margin: 0 0 18px; }
+.pub__genres { display: flex; flex-wrap: wrap; gap: 8px; margin: 0; padding: 0; list-style: none; }
+.pub__genres li { font-size: 13px; padding: 3px 12px; border: 1px solid #b8b3a6; color: #4d5160; background: #f7f4ed; }
+.pub__cta { margin: 22px 0 0; }
+.pub__link { display: inline-flex; align-items: center; min-height: 44px; color: #20304f; border-bottom: 1px solid #20304f; text-decoration: none; font-size: 14px; }
+.pub__count { text-align: center; border-left: 1px solid #cfcabd; padding-left: 36px; }
+.pub__n { display: block; font: 500 64px/1.2 var(--roman); font-variant-numeric: tabular-nums; }
+.pub__n small { font: 400 18px "Zen Kaku Gothic New", sans-serif; margin-left: 6px; }
+.pub__since { display: block; font-size: 13px; color: #626072; margin-top: 6px; }
+
+.channel { margin-top: 64px; padding: 30px 36px 32px; border: 1px solid #aeb7c6; background: #f1f3f6; }
+.channel__tag { font: 500 12px/1.6 var(--roman); letter-spacing: .2em; color: #5a647a; margin: 0; }
+.channel__title { font: 600 24px/1.6 var(--serif); margin: 6px 0 10px; }
+.channel__text { margin: 0; max-width: 40em; }
+.channel__cta { margin: 20px 0 0; }
+.channel__link { display: inline-flex; align-items: center; min-height: 44px; color: #20304f; border-bottom: 1px solid #20304f; text-decoration: none; font-size: 14px; }
+
+@media (max-width: 760px) {
+  .pub { grid-template-columns: minmax(0, 1fr); gap: 24px; padding: 26px 22px 28px 26px; }
+  .pub__count { border-left: 0; border-top: 1px solid #cfcabd; padding: 20px 0 0; text-align: left; display: flex; align-items: baseline; gap: 16px; }
+  .pub__n { font-size: 48px; }
+  .pub__since { margin-top: 0; }
+  .channel { padding: 24px 22px 26px; }
+}
