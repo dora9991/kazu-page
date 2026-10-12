@@ -15,19 +15,19 @@
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
 </head>
-<body>
+<body data-page="home">
 <a class="skip" href="#main">本文へ移動</a>
 <header class="topbar">
   <div class="wrap topbar__in">
-    <a class="topbar__name" href="#top">kazu</a>
-    <nav class="topbar__nav" aria-label="ページの目次">
-      <a href="#listen">聴く</a>
-      <a href="#about">わたし</a>
-      <a href="#journey">歩み</a>
-      <a href="#works">つくったもの</a>
-      <a href="#now">いま</a>
-      <a href="#books">本</a>
-      <a href="#charge">音と探究</a>
+    <a class="topbar__name" href="index.html" aria-current="page">kazu</a>
+    <nav class="topbar__nav" aria-label="ページの切りかえ">
+      <a href="listen.html">聴く</a>
+      <a href="about.html">わたし</a>
+      <a href="journey.html">歩み</a>
+      <a href="works.html">つくったもの</a>
+      <a href="now.html">いま</a>
+      <a href="books.html">本</a>
+      <a href="charge.html">音と探究</a>
     </nav>
   </div>
 </header>
@@ -41,17 +41,17 @@
     <p class="hero__statement"><span class="ph">つくることで、</span><span class="ph">「わかった」を灯す。</span></p>
     <p class="hero__lead">数学の先生をしながら、ゲームや学びの道具、物語や曲をつくっています。教室の困りごとの隣で、手を動かすのが好きです。</p>
     <p class="hero__cta">
-      <a class="btn btn--primary" href="#listen">まず、音を聴く</a>
-      <a class="btn btn--ghost" href="#works">つくってきたもの</a>
+      <a class="btn btn--primary" href="listen.html">まず、音を聴く</a>
+      <a class="btn btn--ghost" href="works.html">つくってきたもの</a>
     </p>
     <ul class="hero__news" aria-label="新しいこと">
-      <li><time class="hero__news-date">10.11</time><a href="#w-ai-violinist">AIバイオリニストを公開しました</a></li>
-      <li><time class="hero__news-date">10.11</time><a href="#w-kantan-seiseki">かんたん成績を公開しました</a></li>
-      <li><time class="hero__news-date">10.09</time><a href="#w-math-labo-third">数学ラボ3 に、裏ボスと「みんなで戦う」が加わりました</a></li>
+      <li><time class="hero__news-date">10.11</time><a href="works.html#w-ai-violinist">AIバイオリニストを公開しました</a></li>
+      <li><time class="hero__news-date">10.11</time><a href="works.html#w-kantan-seiseki">かんたん成績を公開しました</a></li>
+      <li><time class="hero__news-date">10.09</time><a href="works.html#w-math-labo-third">数学ラボ3 に、裏ボスと「みんなで戦う」が加わりました</a></li>
     </ul>
   </div>
   <a class="hero__cue" href="#listen" aria-label="下へ進む"><span aria-hidden="true"></span></a>
-  <p class="hero__updated">2026年10月12日 更新</p>
+  <p class="hero__updated">2026年10月13日 更新</p>
 </section>
 
 <section class="sec sec--night listen" id="listen" aria-labelledby="listen-title">
@@ -70,76 +70,68 @@
           <audio class="track__audio" controls preload="none" src="https://dora9991.github.io/math-labo-third/bgm/story_prologue.m4a">この端末では音を再生できません。</audio>
         </div>
       </li>
-      <li class="track" data-track>
-        <span class="track__no" aria-hidden="true">02</span>
-        <div class="track__body">
-          <h3 class="track__title">天文台のひととき</h3>
-          <p class="track__note">あたたかくて、少しユーモラスな、ふだんの時間。</p>
-          <audio class="track__audio" controls preload="none" src="https://dora9991.github.io/math-labo-third/bgm/story_daily.m4a">この端末では音を再生できません。</audio>
-        </div>
-      </li>
-      <li class="track" data-track>
-        <span class="track__no" aria-hidden="true">03</span>
-        <div class="track__body">
-          <h3 class="track__title">オルゴールの記憶</h3>
-          <p class="track__note">なつかしくて、せつない、小さな音。</p>
-          <audio class="track__audio" controls preload="none" src="https://dora9991.github.io/math-labo-third/bgm/story_memory.m4a">この端末では音を再生できません。</audio>
-        </div>
-      </li>
-      <li class="track" data-track>
-        <span class="track__no" aria-hidden="true">04</span>
-        <div class="track__body">
-          <h3 class="track__title">ただいま、の朝</h3>
-          <p class="track__note">あたたかい安堵。物語の、ひとつの終わり。</p>
-          <audio class="track__audio" controls preload="none" src="https://dora9991.github.io/math-labo-third/bgm/story_epilogue_g1.m4a">この端末では音を再生できません。</audio>
-        </div>
-      </li>
     </ol>
-    <p class="listen__from">数学ラボ3 の物語の場面で、流れています。 <a class="listen__game" href="https://dora9991.github.io/math-labo-third/" target="_blank" rel="noopener">ゲームをあそんでみる<span aria-hidden="true"> ↗</span></a></p>
+    <p class="listen__from">数学ラボ3 の物語の場面で、流れています。 <a class="listen__game" href="listen.html">4曲ぜんぶ聴く<span aria-hidden="true"> →</span></a></p>
   </div>
 </section>
 
-<section class="sec sec--paper about" id="about" aria-labelledby="about-title">
-  <div class="wrap about__in">
-    <div class="about__text">
-    <header class="sec-head">
-      <p class="kicker">ABOUT</p>
-      <h2 class="sec-title" id="about-title">どんな人か</h2>
-      
-    </header>
-      <div class="prose"><p>数学の先生をしています。教室で生まれる「わからない」や、職員室の「時間がない」の隣で、それを少し軽くする道具をつくるのが好きです。</p>
-        <p>表から見ると、ゲーム、授業の道具、物語、曲、研究のノートとばらばらですが、根っこはひとつです。<strong>現場の困りごとを、つくることで解決したい。</strong></p>
-        <p>数か月ごとに、夢中になるものが移ります。いまはこれが前景、ほかは背景で休ませる。波のような性分ですが、そうやって長く走ってきました。</p>
-        <p>音楽は、自分の電池であると同時に、だれかに届けて、心を動かしたいものになりました。</p>
-        <p>朝はピアノから始めて、一日の終わりにギターを弾いて眠ります。</p></div>
-    </div>
-    <aside class="profile" aria-label="プロフィール">
-      <p class="profile__mark" aria-hidden="true">k</p>
-      <dl class="profile__facts">
-        <div><dt>しごと</dt><dd>中学・高校の数学の先生</dd></div>
-        <div><dt>つくるもの</dt><dd>学習ゲーム、授業と校務の道具、物語、曲</dd></div>
-        <div><dt>音楽</dt><dd>リコーダー、吹奏楽、クラシックギター、ピアノ。作曲と編曲。人に届けるために</dd></div>
-        <div><dt>探究</dt><dd>リーマン予想、ナビエ–ストークス方程式</dd></div>
-        <div><dt>気質</dt><dd>波型。いまの波に乗って、深く掘る</dd></div>
-        <div><dt>よく使う比喩</dt><dd>電池、波、川の入口、光</dd></div>
-      </dl>
-    </aside>
-  </div>
-</section>
-
-<section class="sec sec--paper core" id="core" aria-labelledby="core-title">
+<section class="sec sec--paper gate" id="gate" aria-labelledby="gate-title">
   <div class="wrap">
     <header class="sec-head">
-      <p class="kicker">ROOTS</p>
-      <h2 class="sec-title" id="core-title">根っこはひとつ</h2>
-      
+      <p class="kicker">CONTENTS</p>
+      <h2 class="sec-title" id="gate-title">どこから見ますか。</h2>
+      <p class="sec-lead">上のタグからも、同じところへ行けます。</p>
     </header>
-    <blockquote class="core__quote"><span class="ph">生徒の「わからない」も、</span><span class="ph">先生の「時間がない」も、</span><span class="ph">同じ場所から出ている。</span></blockquote>
-    <ul class="core__list">
-      <li class="bundle"><span class="bundle__no">01</span><h3 class="bundle__title">生徒の学びをつくる</h3><p>苦手な人が「できそう」と思え、得意な人が「もっと挑戦したい」と思える場所。</p><p class="bundle__eg">数学ラボ・数学ハンター・とけた！・数学の単語帳</p></li>
-      <li class="bundle"><span class="bundle__no">02</span><h3 class="bundle__title">先生の時間をつくる</h3><p>一人で抱えている仕事を、軽く、ほかの先生にも渡せる形に。</p><p class="bundle__eg">指導案・面談の日程・授業ナビ・書道の審査・勤務表</p></li>
-      <li class="bundle"><span class="bundle__no">03</span><h3 class="bundle__title">体験をしかける</h3><p>見ているだけの人がいない発表、思わず手が動く遊び。</p><p class="bundle__eg">文化祭クエスト・いっせんどう・試合のふり返り</p></li>
-      <li class="bundle"><span class="bundle__no">04</span><h3 class="bundle__title">学び続ける姿を見せる</h3><p>暗記ではなく、発見の楽しさ。まず自分がやってみる。</p><p class="bundle__eg">作曲と演奏・数学の研究・本を書くこと</p></li>
+    <ul class="gate__list">
+      <li class="gate__item"><a class="gate__card" href="listen.html">
+        <span class="gate__no" aria-hidden="true">01</span>
+        <span class="gate__kicker">LISTEN</span>
+        <span class="gate__label">聴く</span>
+        <span class="gate__blurb">物語の場面のためにつくった曲を、4つ。ボタンを押すと流れます。</span>
+        <span class="gate__go" aria-hidden="true">→</span>
+      </a></li>
+      <li class="gate__item"><a class="gate__card" href="about.html">
+        <span class="gate__no" aria-hidden="true">02</span>
+        <span class="gate__kicker">ABOUT</span>
+        <span class="gate__label">わたし</span>
+        <span class="gate__blurb">どんな人か。根っこにあるものと、大切にしていること。</span>
+        <span class="gate__go" aria-hidden="true">→</span>
+      </a></li>
+      <li class="gate__item"><a class="gate__card" href="journey.html">
+        <span class="gate__no" aria-hidden="true">03</span>
+        <span class="gate__kicker">JOURNEY</span>
+        <span class="gate__label">歩み</span>
+        <span class="gate__blurb">島の学校に移った2021年ごろから、いままで。</span>
+        <span class="gate__go" aria-hidden="true">→</span>
+      </a></li>
+      <li class="gate__item"><a class="gate__card" href="works.html">
+        <span class="gate__no" aria-hidden="true">04</span>
+        <span class="gate__kicker">WORKS</span>
+        <span class="gate__label">つくったもの</span>
+        <span class="gate__blurb">23の作品を、星図で。いま遊べるものもあります。</span>
+        <span class="gate__go" aria-hidden="true">→</span>
+      </a></li>
+      <li class="gate__item"><a class="gate__card" href="now.html">
+        <span class="gate__no" aria-hidden="true">05</span>
+        <span class="gate__kicker">NOW</span>
+        <span class="gate__label">いま</span>
+        <span class="gate__blurb">いま、いちばん前にあるもの。</span>
+        <span class="gate__go" aria-hidden="true">→</span>
+      </a></li>
+      <li class="gate__item"><a class="gate__card" href="books.html">
+        <span class="gate__no" aria-hidden="true">06</span>
+        <span class="gate__kicker">BOOKS</span>
+        <span class="gate__label">本</span>
+        <span class="gate__blurb">出している本と、いま書いている原稿。</span>
+        <span class="gate__go" aria-hidden="true">→</span>
+      </a></li>
+      <li class="gate__item"><a class="gate__card" href="charge.html">
+        <span class="gate__no" aria-hidden="true">07</span>
+        <span class="gate__kicker">CHARGE</span>
+        <span class="gate__label">音と探究</span>
+        <span class="gate__blurb">「何の役に立つか」で測らない時間と、作曲講座の動画。</span>
+        <span class="gate__go" aria-hidden="true">→</span>
+      </a></li>
     </ul>
   </div>
 </section>
@@ -155,595 +147,6 @@
   </div>
 </section>
 
-<section class="sec sec--dusk journey" id="journey" aria-labelledby="journey-title">
-  <div class="wrap narrow">
-    <header class="sec-head">
-      <p class="kicker">JOURNEY</p>
-      <h2 class="sec-title" id="journey-title">歩んできた道</h2>
-      <p class="sec-lead">島の学校に移った2021年ごろから、いままでを書きます。つまずいて、ほどけて、もう一度はじめる。その往復が、いまの道具や物語の材料になっています。</p>
-    </header>
-    <details class="prelude">
-      <summary><span class="prelude__label">それより前のこと</span><span class="prelude__note">子どものころから、はじめての教室まで</span></summary>
-      <ol class="journey__list journey__list--prelude">
-        <li class="journey__item"><span class="journey__when">小学3年</span><h3 class="journey__title">リコーダーに夢中になる</h3><p>うまくハモれなかったのが悔しくて、聞こえた曲を片っぱしから吹きました。耳で音をつかまえる力は、ここから。</p></li>
-        <li class="journey__item"><span class="journey__when">吹奏楽部</span><h3 class="journey__title">人との間で、つまずく</h3><p>人間関係がうまくいかず、人を信じるのが少し怖くなりました。</p></li>
-        <li class="journey__item"><span class="journey__when">高校</span><h3 class="journey__title">自分を隠していた</h3><p>嫌われないことを優先して、顔色を読む毎日。数学は得意でも、心は苦しかった。</p></li>
-        <li class="journey__item"><span class="journey__when">大学</span><h3 class="journey__title">ギターに、ほどかれる</h3><p>クラシックギターのサークルで、話をちゃんと聞いてくれる先輩に出会いました。人は怖い存在ばかりではない、と思えました。</p></li>
-        <li class="journey__item"><span class="journey__when">初任のころ</span><h3 class="journey__title">大きくつまずく</h3><p>授業も学級も、うまくいきませんでした。別の道を考えた時期です。</p></li>
-      </ol>
-    </details>
-    <ol class="journey__list">
-      <li class="journey__item"><span class="journey__when">2021年〜</span><h3 class="journey__title">島の学校へ</h3><p>校長先生のすすめと、自分の希望で、島の学校へ。最初から楽ではなく、うまくいかないこともありました。</p></li>
-      <li class="journey__item"><span class="journey__when">島で</span><h3 class="journey__title">音楽が、居場所になる</h3><p>みんなの前で演奏して、ほめてもらえました。音楽を活かして、と、いろいろ頼んでくれる先輩もいました。小学3年のリコーダーから続けてきた音楽が、はじめて職場での居場所になりました。</p></li>
-      <li class="journey__item"><span class="journey__when">島で</span><h3 class="journey__title">音楽を、届けたいものにする</h3><p>音楽を、作ったり、演奏したりして、相手に届けたい。それで、だれかに感動を与えたい。そう思うようになりました。音楽は「自分の電池」であるだけでなく、「人に届けるもの」にもなっていきました。</p></li>
-      <li class="journey__item"><span class="journey__when">島で</span><h3 class="journey__title">自分の授業をつくる</h3><p>はじめは、うまい先生の授業をまねしていました。そこから、自分で考えたものを出したとき、とてもいい反応が返ってきました。クラスでバンドをしたのも、このころです。</p></li>
-      <li class="journey__item"><span class="journey__when">島で</span><h3 class="journey__title">「全部自分で作る」から離れる</h3><p>先輩たちのやり方を受け取ると、楽になり、うまくいくことを知りました。「もっと作る」より「作ったものを活かす」。いまの考え方の入口です。</p></li>
-      <li class="journey__item"><span class="journey__when">島を出て</span><h3 class="journey__title">小さな学校で、自信を取りもどす</h3><p>小学生もいる、小規模の小中一貫校へ。「寄り添う授業」が、少しずつはまってきました。</p></li>
-      <li class="journey__item"><span class="journey__when">その後</span><h3 class="journey__title">中高一貫校へ</h3><p>声をかけてもらい、希望して異動。40人の学級で、自分のスタイルが固まっていきました。音楽や動画の編集が、仕事の中でも活きるようになりました。</p></li>
-      <li class="journey__item"><span class="journey__when">2023年 9月</span><h3 class="journey__title">作曲の動画を、投稿しはじめる</h3><p>「だれでも楽しくDTMができるチャンネル」を目指して、パソコンでの作曲を、わかりやすく解説する動画を投稿しはじめました。</p></li>
-      <li class="journey__item"><span class="journey__when">2024年 11月</span><h3 class="journey__title">はじめての数学のページ</h3><p>正の数・負の数の問題を、初級・中級・上級からえらんで解く小さなページ。ここが「つくる」の入口になりました。</p></li>
-      <li class="journey__item"><span class="journey__when">2025年 8月</span><h3 class="journey__title">別の名前で、本を書きはじめる</h3><p>Kindle で、別の名前の本を書きはじめました。人間関係や気持ちの悩みに寄りそう「心ラクシリーズ」を、一冊ずつ。いまは58冊です。</p></li>
-      <li class="journey__item"><span class="journey__when">2026年 春</span><h3 class="journey__title">つくる速さが変わる</h3><p>AI と組んでつくるようになり、5か月で25を超えるアプリや教材を公開しました。</p></li>
-      <li class="journey__item"><span class="journey__when">2026年 秋</span><h3 class="journey__title">「先生、何者ですか？」</h3><p>数式で戦うゲームを見せたら、生徒にそう聞かれました。うれしかった。</p></li>
-      <li class="journey__item"><span class="journey__when">2026年 10月</span><h3 class="journey__title">音楽を、人に渡せる形にする</h3><p>曲を入れると、AI がバイオリンのパートを書き足す「AIバイオリニスト」を公開しました。曲づくりで困っている人に、渡したくて。</p></li>
-    </ol>
-  </div>
-</section>
-
-<section class="motto" aria-label="ことば">
-  <div class="wrap narrow">
-    <blockquote class="motto__text"><span class="ph">まちがえても、</span><span class="ph">光は消えない。</span></blockquote>
-    <p class="motto__from">数学ラボ3 ― アストラ天文台の物語</p>
-  </div>
-</section>
-
-<section class="sec sec--night works" id="works" aria-labelledby="works-title">
-  <div class="wrap">
-    <header class="sec-head">
-      <p class="kicker">WORKS</p>
-      <h2 class="sec-title" id="works-title">つくってきたもの</h2>
-      <p class="sec-lead">点ひとつが、ひとつの作品です。横は時間、縦は「何のためにつくったか」。</p>
-    </header>
-    <figure class="sky">
-      <div class="sky__scroll"><svg class="sky__svg" viewBox="0 0 1000 616" role="img" aria-labelledby="sky-title sky-desc">
-    <title id="sky-title">つくってきたものの星図</title>
-    <desc id="sky-desc">横は公開した時期（2024年11月から2026年10月）、縦は何のためにつくったか（遊んで学ぶ・学びの道具・先生の道具・音と映像の道具・暮らしの道具・ふり返りの道具）。点ひとつが作品で、押すと下の説明に移ります。</desc>
-    <text class="sky__lane" x="16" y="69">遊んで学ぶ</text><line class="sky__rule" x1="128" y1="64" x2="984" y2="64"/><text class="sky__lane" x="16" y="161">学びの道具</text><line class="sky__rule" x1="128" y1="156" x2="984" y2="156"/><text class="sky__lane" x="16" y="253">先生の道具</text><line class="sky__rule" x1="128" y1="248" x2="984" y2="248"/><text class="sky__lane" x="16" y="345">音と映像の道具</text><line class="sky__rule" x1="128" y1="340" x2="984" y2="340"/><text class="sky__lane" x="16" y="437">暮らしの道具</text><line class="sky__rule" x1="128" y1="432" x2="984" y2="432"/><text class="sky__lane" x="16" y="529">ふり返りの道具</text><line class="sky__rule" x1="128" y1="524" x2="984" y2="524"/><polyline class="sky__line" points="160,64 440,64 781,64 819,64 920,64"/><polyline class="sky__line" points="440,156 560,156 901,156 939,156"/><polyline class="sky__line" points="421,248 459,248 882,248 920,248 958,248"/><polyline class="sky__line" points="863,340 901,340 939,340 977,340"/><polyline class="sky__line" points="882,432 920,432 958,432"/><polyline class="sky__line" points="901,524 939,524"/><text class="sky__tick" x="160" y="610" text-anchor="middle">2024.11</text><text class="sky__tick" x="225" y="610" text-anchor="middle">12</text><text class="sky__tick" x="320" y="610" text-anchor="middle">2026.5</text><text class="sky__tick" x="440" y="610" text-anchor="middle">6</text><text class="sky__tick" x="560" y="610" text-anchor="middle">7</text><text class="sky__tick" x="680" y="610" text-anchor="middle">8</text><text class="sky__tick" x="800" y="610" text-anchor="middle">9</text><text class="sky__tick" x="920" y="610" text-anchor="middle">10</text><text class="sky__gap" x="272" y="610" text-anchor="middle">⋯</text><line class="sky__break" x1="262" y1="28" x2="282" y2="586"/>
-    <a class="sky__item has-label" href="#w-dora-math" aria-label="はじめての数学のページ（2024年11月）">
-      <title>はじめての数学のページ（2024年11月）</title>
-      <circle class="sky__hit" cx="160" cy="64" r="22"/>
-      <circle class="sky__glow" cx="160" cy="64" r="11"/>
-      <circle class="sky__star" cx="160" cy="64" r="4.5"/>
-      <text class="sky__label" x="160" y="49" text-anchor="middle">はじめての数学のページ</text>
-    </a>
-<a class="sky__item" href="#w-bunkasai-quest" aria-label="文化祭クエスト（2026年6月）">
-      <title>文化祭クエスト（2026年6月）</title>
-      <circle class="sky__hit" cx="440" cy="64" r="22"/>
-      <circle class="sky__glow" cx="440" cy="64" r="11"/>
-      <circle class="sky__star" cx="440" cy="64" r="4.5"/>
-      <text class="sky__label" x="440" y="49" text-anchor="middle">文化祭クエスト</text>
-    </a>
-<a class="sky__item" href="#w-issendo" aria-label="いっせんどう（2026年9月）">
-      <title>いっせんどう（2026年9月）</title>
-      <circle class="sky__hit" cx="781" cy="64" r="22"/>
-      <circle class="sky__glow" cx="781" cy="64" r="11"/>
-      <circle class="sky__star" cx="781" cy="64" r="4.5"/>
-      <text class="sky__label" x="781" y="49" text-anchor="middle">いっせんどう</text>
-    </a>
-<a class="sky__item is-star has-label" href="#w-math-labo-third" aria-label="数学ラボ3 ― アストラ天文台の物語（2026年9月）">
-      <title>数学ラボ3 ― アストラ天文台の物語（2026年9月）</title>
-      <circle class="sky__hit" cx="819" cy="64" r="22"/>
-      <circle class="sky__glow" cx="819" cy="64" r="16"/>
-      <circle class="sky__star" cx="819" cy="64" r="7"/>
-      <text class="sky__label" x="819" y="89" text-anchor="middle">数学ラボ3</text>
-    </a>
-<a class="sky__item is-star has-label" href="#w-math-hunter" aria-label="竜狩りの谷 ― 数式で狩れ（2026年10月）">
-      <title>竜狩りの谷 ― 数式で狩れ（2026年10月）</title>
-      <circle class="sky__hit" cx="920" cy="64" r="22"/>
-      <circle class="sky__glow" cx="920" cy="64" r="16"/>
-      <circle class="sky__star" cx="920" cy="64" r="7"/>
-      <text class="sky__label" x="920" y="49" text-anchor="middle">竜狩りの谷</text>
-    </a>
-<a class="sky__item" href="#w-toketa" aria-label="とけた！（2026年6月）">
-      <title>とけた！（2026年6月）</title>
-      <circle class="sky__hit" cx="440" cy="156" r="22"/>
-      <circle class="sky__glow" cx="440" cy="156" r="11"/>
-      <circle class="sky__star" cx="440" cy="156" r="4.5"/>
-      <text class="sky__label" x="440" y="141" text-anchor="middle">とけた！</text>
-    </a>
-<a class="sky__item" href="#w-suugaku-handbook" aria-label="数学の単語帳（2026年7月）">
-      <title>数学の単語帳（2026年7月）</title>
-      <circle class="sky__hit" cx="560" cy="156" r="22"/>
-      <circle class="sky__glow" cx="560" cy="156" r="11"/>
-      <circle class="sky__star" cx="560" cy="156" r="4.5"/>
-      <text class="sky__label" x="560" y="141" text-anchor="middle">数学の単語帳</text>
-    </a>
-<a class="sky__item" href="#w-ho-ponta" aria-label="ホー先生とポンタ（2026年10月）">
-      <title>ホー先生とポンタ（2026年10月）</title>
-      <circle class="sky__hit" cx="901" cy="156" r="22"/>
-      <circle class="sky__glow" cx="901" cy="156" r="11"/>
-      <circle class="sky__star" cx="901" cy="156" r="4.5"/>
-      <text class="sky__label" x="901" y="141" text-anchor="middle">ホー先生とポンタ</text>
-    </a>
-<a class="sky__item" href="#w-jiyu-shindo" aria-label="じゆう進度（2026年10月）">
-      <title>じゆう進度（2026年10月）</title>
-      <circle class="sky__hit" cx="939" cy="156" r="22"/>
-      <circle class="sky__glow" cx="939" cy="156" r="11"/>
-      <circle class="sky__star" cx="939" cy="156" r="4.5"/>
-      <text class="sky__label" x="939" y="181" text-anchor="middle">じゆう進度</text>
-    </a>
-<a class="sky__item" href="#w-shidoan" aria-label="学習指導案サポート（2026年6月）">
-      <title>学習指導案サポート（2026年6月）</title>
-      <circle class="sky__hit" cx="421" cy="248" r="22"/>
-      <circle class="sky__glow" cx="421" cy="248" r="11"/>
-      <circle class="sky__star" cx="421" cy="248" r="4.5"/>
-      <text class="sky__label" x="421" y="233" text-anchor="middle">学習指導案サポート</text>
-    </a>
-<a class="sky__item" href="#w-mendan" aria-label="三者・二者面談スケジューラ（2026年6月）">
-      <title>三者・二者面談スケジューラ（2026年6月）</title>
-      <circle class="sky__hit" cx="459" cy="248" r="22"/>
-      <circle class="sky__glow" cx="459" cy="248" r="11"/>
-      <circle class="sky__star" cx="459" cy="248" r="4.5"/>
-      <text class="sky__label" x="459" y="273" text-anchor="middle">三者・二者面談スケジューラ</text>
-    </a>
-<a class="sky__item" href="#w-jugyo-navi" aria-label="授業ナビ（2026年10月）">
-      <title>授業ナビ（2026年10月）</title>
-      <circle class="sky__hit" cx="882" cy="248" r="22"/>
-      <circle class="sky__glow" cx="882" cy="248" r="11"/>
-      <circle class="sky__star" cx="882" cy="248" r="4.5"/>
-      <text class="sky__label" x="882" y="233" text-anchor="middle">授業ナビ</text>
-    </a>
-<a class="sky__item" href="#w-kantan-seiseki" aria-label="かんたん成績（2026年10月）">
-      <title>かんたん成績（2026年10月）</title>
-      <circle class="sky__hit" cx="920" cy="248" r="22"/>
-      <circle class="sky__glow" cx="920" cy="248" r="11"/>
-      <circle class="sky__star" cx="920" cy="248" r="4.5"/>
-      <text class="sky__label" x="920" y="273" text-anchor="middle">かんたん成績</text>
-    </a>
-<a class="sky__item" href="#w-shodo" aria-label="書道 審査アシスタント（2026年10月）">
-      <title>書道 審査アシスタント（2026年10月）</title>
-      <circle class="sky__hit" cx="958" cy="248" r="22"/>
-      <circle class="sky__glow" cx="958" cy="248" r="11"/>
-      <circle class="sky__star" cx="958" cy="248" r="4.5"/>
-      <text class="sky__label" x="958" y="233" text-anchor="middle">書道 審査アシスタント</text>
-    </a>
-<a class="sky__item is-star has-label" href="#w-ai-violinist" aria-label="AIバイオリニスト（2026年10月）">
-      <title>AIバイオリニスト（2026年10月）</title>
-      <circle class="sky__hit" cx="863" cy="340" r="22"/>
-      <circle class="sky__glow" cx="863" cy="340" r="16"/>
-      <circle class="sky__star" cx="863" cy="340" r="7"/>
-      <text class="sky__label" x="863" y="325" text-anchor="middle">AIバイオリニスト</text>
-    </a>
-<a class="sky__item" href="#w-slideshow" aria-label="ホワンとスライドショー（2026年10月）">
-      <title>ホワンとスライドショー（2026年10月）</title>
-      <circle class="sky__hit" cx="901" cy="340" r="22"/>
-      <circle class="sky__glow" cx="901" cy="340" r="11"/>
-      <circle class="sky__star" cx="901" cy="340" r="4.5"/>
-      <text class="sky__label" x="901" y="365" text-anchor="middle">ホワンとスライドショー</text>
-    </a>
-<a class="sky__item" href="#w-manim-kobo" aria-label="数学アニメ工房（2026年10月）">
-      <title>数学アニメ工房（2026年10月）</title>
-      <circle class="sky__hit" cx="939" cy="340" r="22"/>
-      <circle class="sky__glow" cx="939" cy="340" r="11"/>
-      <circle class="sky__star" cx="939" cy="340" r="4.5"/>
-      <text class="sky__label" x="939" y="325" text-anchor="middle">数学アニメ工房</text>
-    </a>
-<a class="sky__item" href="#w-my-composer-ai" aria-label="自分用の作曲AI（2026年10月）">
-      <title>自分用の作曲AI（2026年10月）</title>
-      <circle class="sky__hit" cx="977" cy="340" r="22"/>
-      <circle class="sky__glow" cx="977" cy="340" r="11"/>
-      <circle class="sky__star" cx="977" cy="340" r="4.5"/>
-      <text class="sky__label" x="977" y="365" text-anchor="middle">自分用の作曲AI</text>
-    </a>
-<a class="sky__item" href="#w-hogosha" aria-label="部活保護者会アプリ（2026年10月）">
-      <title>部活保護者会アプリ（2026年10月）</title>
-      <circle class="sky__hit" cx="882" cy="432" r="22"/>
-      <circle class="sky__glow" cx="882" cy="432" r="11"/>
-      <circle class="sky__star" cx="882" cy="432" r="4.5"/>
-      <text class="sky__label" x="882" y="417" text-anchor="middle">部活保護者会アプリ</text>
-    </a>
-<a class="sky__item" href="#w-kinmu" aria-label="保育園の勤務割表（2026年10月）">
-      <title>保育園の勤務割表（2026年10月）</title>
-      <circle class="sky__hit" cx="920" cy="432" r="22"/>
-      <circle class="sky__glow" cx="920" cy="432" r="11"/>
-      <circle class="sky__star" cx="920" cy="432" r="4.5"/>
-      <text class="sky__label" x="920" y="457" text-anchor="middle">保育園の勤務割表</text>
-    </a>
-<a class="sky__item" href="#w-tabi-shiori" aria-label="たびしおり（2026年10月）">
-      <title>たびしおり（2026年10月）</title>
-      <circle class="sky__hit" cx="958" cy="432" r="22"/>
-      <circle class="sky__glow" cx="958" cy="432" r="11"/>
-      <circle class="sky__star" cx="958" cy="432" r="4.5"/>
-      <text class="sky__label" x="958" y="417" text-anchor="middle">たびしおり</text>
-    </a>
-<a class="sky__item" href="#w-soccer" aria-label="サッカー分析スタジオ（2026年10月）">
-      <title>サッカー分析スタジオ（2026年10月）</title>
-      <circle class="sky__hit" cx="901" cy="524" r="22"/>
-      <circle class="sky__glow" cx="901" cy="524" r="11"/>
-      <circle class="sky__star" cx="901" cy="524" r="4.5"/>
-      <text class="sky__label" x="901" y="509" text-anchor="middle">サッカー分析スタジオ</text>
-    </a>
-<a class="sky__item" href="#w-basketball" aria-label="バスケ分析スタジオ（2026年10月）">
-      <title>バスケ分析スタジオ（2026年10月）</title>
-      <circle class="sky__hit" cx="939" cy="524" r="22"/>
-      <circle class="sky__glow" cx="939" cy="524" r="11"/>
-      <circle class="sky__star" cx="939" cy="524" r="4.5"/>
-      <text class="sky__label" x="939" y="549" text-anchor="middle">バスケ分析スタジオ</text>
-    </a>
-  </svg></div>
-      <nav class="lanechips" aria-label="区分へ移動"><a href="#lane-play">遊んで学ぶ<span>5</span></a><a href="#lane-learn">学びの道具<span>4</span></a><a href="#lane-teacher">先生の道具<span>5</span></a><a href="#lane-media">音と映像の道具<span>4</span></a><a href="#lane-life">暮らしの道具<span>3</span></a><a href="#lane-sports">ふり返りの道具<span>2</span></a></nav>
-      <figcaption class="sky__caption">大きな点は、いまいちばん力を入れているもの。点を押すと、その作品の説明へ移ります。</figcaption>
-    </figure>
-    <div class="lane" id="lane-play">
-      <h3 class="lane__title">遊んで学ぶ<span class="lane__n">5</span></h3>
-      <div class="works__grid">
-      <article class="work work--star" id="w-math-hunter">
-        <a class="work__shot" href="https://dora9991.github.io/math-hunter/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/works/math-hunter.jpg" alt="" width="960" height="600" loading="lazy"></a>
-        <div class="work__body">
-          <p class="work__meta"><span class="work__lane">遊んで学ぶ</span><time datetime="2026-10">2026年10月</time><span class="stage">本格化中</span></p>
-          <h3 class="work__title">竜狩りの谷 ― 数式で狩れ</h3>
-          <p class="work__sum">数式を解くと、剣が振れる。止まらない3Dのモンスターバトル。Blender でつくった13体と、スマホでも遊べます。</p>
-          
-          <p class="work__cta"><a class="work__link" href="https://dora9991.github.io/math-hunter/" target="_blank" rel="noopener">あそんでみる<span aria-hidden="true"> ↗</span></a></p>
-        </div>
-      </article>
-      <article class="work work--star" id="w-math-labo-third">
-        <a class="work__shot" href="https://dora9991.github.io/math-labo-third/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/works/math-labo-third.jpg" alt="" width="960" height="600" loading="lazy"></a>
-        <div class="work__body">
-          <p class="work__meta"><span class="work__lane">遊んで学ぶ</span><time datetime="2026-09">2026年9月</time><span class="stage">10月9日に新しい版</span></p>
-          <h3 class="work__title">数学ラボ3 ― アストラ天文台の物語</h3>
-          <p class="work__sum">夜中の二時、窓をたたく白いフクロウ。空に浮かぶ天文台で、数学の「わかった」を光に変えて進む学習RPG。中1〜中3、物語は三部作です。</p>
-          <p class="work__note">数学ラボ（2026年5月）→ 数学ラボ2（6月）→ 数学ラボ3（9月）と育ててきました。</p>
-          <p class="work__cta"><a class="work__link" href="https://dora9991.github.io/math-labo-third/" target="_blank" rel="noopener">あそんでみる<span aria-hidden="true"> ↗</span></a></p>
-        </div>
-      </article>
-      <article class="work" id="w-issendo">
-        <a class="work__shot" href="https://dora9991.github.io/issendo/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/works/issendo.jpg" alt="" width="960" height="600" loading="lazy"></a>
-        <div class="work__body">
-          <p class="work__meta"><span class="work__lane">遊んで学ぶ</span><time datetime="2026-09">2026年9月</time><span class="stage">公開中</span></p>
-          <h3 class="work__title">いっせんどう</h3>
-          <p class="work__sum">しょうがく1ねんせいむけの アクションゲーム。ぜんぶ ひらがな、iPhone の よこがめんで あそべます。</p>
-          
-          <p class="work__cta"><a class="work__link" href="https://dora9991.github.io/issendo/" target="_blank" rel="noopener">あそんでみる<span aria-hidden="true"> ↗</span></a></p>
-        </div>
-      </article>
-      <article class="work" id="w-bunkasai-quest">
-        <div class="work__shot work__shot--gen" aria-hidden="true"><span>✦</span></div>
-        <div class="work__body">
-          <p class="work__meta"><span class="work__lane">遊んで学ぶ</span><time datetime="2026-06">2026年6月</time><span class="stage">文化祭で発表</span></p>
-          <h3 class="work__title">文化祭クエスト</h3>
-          <p class="work__sum">文化祭の発表を、ドラクエ風のRPGに。生徒が主役になれるよう、生徒用のエディターと役割分担のしくみも用意しました。</p>
-          
-          <p class="work__cta"><span class="work__private">公開の準備中</span></p>
-        </div>
-      </article>
-      <article class="work" id="w-dora-math">
-        <a class="work__shot" href="https://dora9991.github.io/dora-math/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/works/dora-math.jpg" alt="" width="960" height="600" loading="lazy"></a>
-        <div class="work__body">
-          <p class="work__meta"><span class="work__lane">遊んで学ぶ</span><time datetime="2024-11">2024年11月</time><span class="stage">公開中</span></p>
-          <h3 class="work__title">はじめての数学のページ</h3>
-          <p class="work__sum">正の数・負の数を、初級・中級・上級からえらんで解く。いちばん最初につくった数学のページです。</p>
-          
-          <p class="work__cta"><a class="work__link" href="https://dora9991.github.io/dora-math/" target="_blank" rel="noopener">ひらく<span aria-hidden="true"> ↗</span></a></p>
-        </div>
-      </article>
-      </div>
-    </div>
-    <div class="lane" id="lane-learn">
-      <h3 class="lane__title">学びの道具<span class="lane__n">4</span></h3>
-      <div class="works__grid">
-      <article class="work" id="w-ho-ponta">
-        <div class="work__shot work__shot--gen" aria-hidden="true"><span>✦</span></div>
-        <div class="work__body">
-          <p class="work__meta"><span class="work__lane">学びの道具</span><time datetime="2026-10">2026年10月</time><span class="stage">制作中</span></p>
-          <h3 class="work__title">ホー先生とポンタ</h3>
-          <p class="work__sum">ふくろうのホー先生と、ちょっとぬけたたぬきのポンタ。会話で進む授業アプリ。自分も答えて、会話に入ります。</p>
-          
-          <p class="work__cta"><span class="work__private">公開の準備中</span></p>
-        </div>
-      </article>
-      <article class="work" id="w-jiyu-shindo">
-        <div class="work__shot work__shot--gen" aria-hidden="true"><span>✦</span></div>
-        <div class="work__body">
-          <p class="work__meta"><span class="work__lane">学びの道具</span><time datetime="2026-10">2026年10月</time><span class="stage">試作</span></p>
-          <h3 class="work__title">じゆう進度</h3>
-          <p class="work__sum">自分のペースで進む授業の「型」。目標をえらび、小テスト、講義、演習、ふり返り。まず中1の空間図形（162問）。</p>
-          
-          <p class="work__cta"><span class="work__private">公開の準備中</span></p>
-        </div>
-      </article>
-      <article class="work" id="w-suugaku-handbook">
-        <a class="work__shot" href="https://dora9991.github.io/suugaku-handbook/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/works/suugaku-handbook.jpg" alt="" width="960" height="600" loading="lazy"></a>
-        <div class="work__body">
-          <p class="work__meta"><span class="work__lane">学びの道具</span><time datetime="2026-07">2026年7月</time><span class="stage">公開中</span></p>
-          <h3 class="work__title">数学の単語帳</h3>
-          <p class="work__sum">英単語と同じように、考えずに反射で出せる計算の型を。中高生向けの計算効率ハンドブック。</p>
-          
-          <p class="work__cta"><a class="work__link" href="https://dora9991.github.io/suugaku-handbook/" target="_blank" rel="noopener">ひらく<span aria-hidden="true"> ↗</span></a></p>
-        </div>
-      </article>
-      <article class="work" id="w-toketa">
-        <a class="work__shot" href="https://dora9991.github.io/toketa/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/works/toketa.jpg" alt="" width="960" height="600" loading="lazy"></a>
-        <div class="work__body">
-          <p class="work__meta"><span class="work__lane">学びの道具</span><time datetime="2026-06">2026年6月</time><span class="stage">試作</span></p>
-          <h3 class="work__title">とけた！</h3>
-          <p class="work__sum">数学ぎらいの中学生のための、つまずきの解決に全振りした学習アプリ。</p>
-          
-          <p class="work__cta"><a class="work__link" href="https://dora9991.github.io/toketa/" target="_blank" rel="noopener">ひらく<span aria-hidden="true"> ↗</span></a></p>
-        </div>
-      </article>
-      </div>
-    </div>
-    <div class="lane" id="lane-teacher">
-      <h3 class="lane__title">先生の道具<span class="lane__n">5</span></h3>
-      <div class="works__grid">
-      <article class="work" id="w-jugyo-navi">
-        <div class="work__shot work__shot--gen" aria-hidden="true"><span>✦</span></div>
-        <div class="work__body">
-          <p class="work__meta"><span class="work__lane">先生の道具</span><time datetime="2026-10">2026年10月</time><span class="stage">制作中</span></p>
-          <h3 class="work__title">授業ナビ</h3>
-          <p class="work__sum">中1〜中3の年間計画297時間と、授業の構想・板書・ワークシート・小テストを、ひと続きに。</p>
-          
-          <p class="work__cta"><span class="work__private">非公開（限られた人向け）</span></p>
-        </div>
-      </article>
-      <article class="work" id="w-kantan-seiseki">
-        <a class="work__shot" href="https://dora9991.github.io/kantan-seiseki/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/works/kantan-seiseki.jpg" alt="" width="960" height="600" loading="lazy"></a>
-        <div class="work__body">
-          <p class="work__meta"><span class="work__lane">先生の道具</span><time datetime="2026-10">2026年10月</time><span class="stage">公開中</span></p>
-          <h3 class="work__title">かんたん成績</h3>
-          <p class="work__sum">観点別のA・B・Cと5段階の評定を、手入力・Excel・PDF・写真から。ルールは見えて、あとから変えられます。名簿も成績も、パソコンの外には出ません。</p>
-          
-          <p class="work__cta"><a class="work__link" href="https://dora9991.github.io/kantan-seiseki/" target="_blank" rel="noopener">つかってみる<span aria-hidden="true"> ↗</span></a></p>
-        </div>
-      </article>
-      <article class="work" id="w-shodo">
-        <a class="work__shot" href="https://dora9991.github.io/shodo-shinsa/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/works/shodo-shinsa.jpg" alt="" width="960" height="600" loading="lazy"></a>
-        <div class="work__body">
-          <p class="work__meta"><span class="work__lane">先生の道具</span><time datetime="2026-10">2026年10月</time><span class="stage">試作</span></p>
-          <h3 class="work__title">書道 審査アシスタント</h3>
-          <p class="work__sum">数百〜数千枚を一人で見る、書道の審査のために。写真から墨を測り、見る順番と見る所を決める一次選別。</p>
-          
-          <p class="work__cta"><a class="work__link" href="https://dora9991.github.io/shodo-shinsa/" target="_blank" rel="noopener">ひらく<span aria-hidden="true"> ↗</span></a></p>
-        </div>
-      </article>
-      <article class="work" id="w-shidoan">
-        <a class="work__shot" href="https://dora9991.github.io/shidoan-sakusei/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/works/shidoan-sakusei.jpg" alt="" width="960" height="600" loading="lazy"></a>
-        <div class="work__body">
-          <p class="work__meta"><span class="work__lane">先生の道具</span><time datetime="2026-06">2026年6月</time><span class="stage">公開中</span></p>
-          <h3 class="work__title">学習指導案サポート</h3>
-          <p class="work__sum">中学校数学の学習指導案を、項目に沿って組み立てる手伝い。</p>
-          
-          <p class="work__cta"><a class="work__link" href="https://dora9991.github.io/shidoan-sakusei/" target="_blank" rel="noopener">ひらく<span aria-hidden="true"> ↗</span></a></p>
-        </div>
-      </article>
-      <article class="work" id="w-mendan">
-        <a class="work__shot" href="https://dora9991.github.io/mendan-scheduler/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/works/mendan-scheduler.jpg" alt="" width="960" height="600" loading="lazy"></a>
-        <div class="work__body">
-          <p class="work__meta"><span class="work__lane">先生の道具</span><time datetime="2026-06">2026年6月</time><span class="stage">公開中</span></p>
-          <h3 class="work__title">三者・二者面談スケジューラ</h3>
-          <p class="work__sum">希望を貼りつけるだけで、面談の日程を自動で組む。ネットにつながなくても動きます。</p>
-          
-          <p class="work__cta"><a class="work__link" href="https://dora9991.github.io/mendan-scheduler/" target="_blank" rel="noopener">ひらく<span aria-hidden="true"> ↗</span></a></p>
-        </div>
-      </article>
-      </div>
-    </div>
-    <div class="lane" id="lane-media">
-      <h3 class="lane__title">音と映像の道具<span class="lane__n">4</span></h3>
-      <div class="works__grid">
-      <article class="work work--star" id="w-ai-violinist">
-        <a class="work__shot" href="https://dora9991.github.io/ai-violinist/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/works/ai-violinist.jpg" alt="" width="960" height="600" loading="lazy"></a>
-        <div class="work__body">
-          <p class="work__meta"><span class="work__lane">音と映像の道具</span><time datetime="2026-10">2026年10月</time><span class="stage">公開中</span></p>
-          <h3 class="work__title">AIバイオリニスト</h3>
-          <p class="work__sum">曲を入れると、AI がバイオリンのパートを書き足します。歌の裏にはそっと、間奏ではかっこよく。MIDI や楽譜にも書き出せます。曲は、ブラウザの中だけで処理されます。</p>
-          
-          <p class="work__cta"><a class="work__link" href="https://dora9991.github.io/ai-violinist/" target="_blank" rel="noopener">つかってみる<span aria-hidden="true"> ↗</span></a></p>
-        </div>
-      </article>
-      <article class="work" id="w-slideshow">
-        <div class="work__shot work__shot--gen" aria-hidden="true"><span>✦</span></div>
-        <div class="work__body">
-          <p class="work__meta"><span class="work__lane">音と映像の道具</span><time datetime="2026-10">2026年10月</time><span class="stage">試作ずみ</span></p>
-          <h3 class="work__title">ホワンとスライドショー</h3>
-          <p class="work__sum">写真を入れて、音楽をえらぶだけ。ふわっと切り替わるスライドショーを、音楽の長さに合わせて自動でつくり、動画にも書き出せます。</p>
-          
-          <p class="work__cta"><span class="work__private">公開の準備中</span></p>
-        </div>
-      </article>
-      <article class="work" id="w-manim-kobo">
-        <div class="work__shot work__shot--gen" aria-hidden="true"><span>✦</span></div>
-        <div class="work__body">
-          <p class="work__meta"><span class="work__lane">音と映像の道具</span><time datetime="2026-10">2026年10月</time><span class="stage">試作</span></p>
-          <h3 class="work__title">数学アニメ工房</h3>
-          <p class="work__sum">数学の説明動画を、コードから自動でつくる試み。数式がなめらかに動く、3Blue1Brown と同じ仕組み（Manim）を使っています。</p>
-          
-          <p class="work__cta"><span class="work__private">公開の準備中</span></p>
-        </div>
-      </article>
-      <article class="work" id="w-my-composer-ai">
-        <div class="work__shot work__shot--gen" aria-hidden="true"><span>✦</span></div>
-        <div class="work__body">
-          <p class="work__meta"><span class="work__lane">音と映像の道具</span><time datetime="2026-10">2026年10月</time><span class="stage">実験中</span></p>
-          <h3 class="work__title">自分用の作曲AI</h3>
-          <p class="work__sum">手元のパソコンで動く作曲AIを試しています。持っている楽器の音源で鳴らせるかも、実験中です。</p>
-          
-          <p class="work__cta"><span class="work__private">公開の準備中</span></p>
-        </div>
-      </article>
-      </div>
-    </div>
-    <div class="lane" id="lane-life">
-      <h3 class="lane__title">暮らしの道具<span class="lane__n">3</span></h3>
-      <div class="works__grid">
-      <article class="work" id="w-hogosha">
-        <a class="work__shot" href="https://dora9991.github.io/hogosha-app/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/works/hogosha-app.jpg" alt="" width="960" height="600" loading="lazy"></a>
-        <div class="work__body">
-          <p class="work__meta"><span class="work__lane">暮らしの道具</span><time datetime="2026-10">2026年10月</time><span class="stage">公開中</span></p>
-          <h3 class="work__title">部活保護者会アプリ</h3>
-          <p class="work__sum">弁当の会計・配車・出欠・練習の予定を、ひとつにまとめたアプリ。一人ひとりがログインして、チームごとに使います。</p>
-          
-          <p class="work__cta"><a class="work__link" href="https://dora9991.github.io/hogosha-app/" target="_blank" rel="noopener">ひらく<span aria-hidden="true"> ↗</span></a></p>
-        </div>
-      </article>
-      <article class="work" id="w-kinmu">
-        <a class="work__shot" href="https://dora9991.github.io/kinmu-hyo-web/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/works/kinmu-hyo-web.jpg" alt="" width="960" height="600" loading="lazy"></a>
-        <div class="work__body">
-          <p class="work__meta"><span class="work__lane">暮らしの道具</span><time datetime="2026-10">2026年10月</time><span class="stage">公開中</span></p>
-          <h3 class="work__title">保育園の勤務割表</h3>
-          <p class="work__sum">人の都合と決まりごとを合わせて、勤務の割り振りを下書きする道具。本物のデータはパスワードの中で、使い方のデモだけ見られます。</p>
-          
-          <p class="work__cta"><a class="work__link" href="https://dora9991.github.io/kinmu-hyo-web/" target="_blank" rel="noopener">デモを見る<span aria-hidden="true"> ↗</span></a></p>
-        </div>
-      </article>
-      <article class="work" id="w-tabi-shiori">
-        <a class="work__shot" href="https://dora9991.github.io/tabi-shiori-app/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/works/tabi-shiori-app.jpg" alt="" width="960" height="600" loading="lazy"></a>
-        <div class="work__body">
-          <p class="work__meta"><span class="work__lane">暮らしの道具</span><time datetime="2026-10">2026年10月</time><span class="stage">公開中</span></p>
-          <h3 class="work__title">たびしおり</h3>
-          <p class="work__sum">旅行の予定を、日ごと・時間ごとに組み立てて、一枚の「しおり」にまとめるプランナー。</p>
-          
-          <p class="work__cta"><a class="work__link" href="https://dora9991.github.io/tabi-shiori-app/" target="_blank" rel="noopener">ひらく<span aria-hidden="true"> ↗</span></a></p>
-        </div>
-      </article>
-      </div>
-    </div>
-    <div class="lane" id="lane-sports">
-      <h3 class="lane__title">ふり返りの道具<span class="lane__n">2</span></h3>
-      <div class="works__grid">
-      <article class="work" id="w-soccer">
-        <a class="work__shot" href="https://dora9991.github.io/soccer-studio/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/works/soccer-studio.jpg" alt="" width="960" height="600" loading="lazy"></a>
-        <div class="work__body">
-          <p class="work__meta"><span class="work__lane">ふり返りの道具</span><time datetime="2026-10">2026年10月</time><span class="stage">公開中</span></p>
-          <h3 class="work__title">サッカー分析スタジオ</h3>
-          <p class="work__sum">試合の動画を開くと、音と映像から見どころを拾う。タグをつけるだけで、個人の記録や得点・失点の場面がまとまります。</p>
-          
-          <p class="work__cta"><a class="work__link" href="https://dora9991.github.io/soccer-studio/" target="_blank" rel="noopener">ひらく<span aria-hidden="true"> ↗</span></a></p>
-        </div>
-      </article>
-      <article class="work" id="w-basketball">
-        <a class="work__shot" href="https://dora9991.github.io/basketball-studio-web/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true"><img src="assets/works/basketball-studio-web.jpg" alt="" width="960" height="600" loading="lazy"></a>
-        <div class="work__body">
-          <p class="work__meta"><span class="work__lane">ふり返りの道具</span><time datetime="2026-10">2026年10月</time><span class="stage">公開中</span></p>
-          <h3 class="work__title">バスケ分析スタジオ</h3>
-          <p class="work__sum">練習試合の動画から、ゴールやシュートを読み取って記録する。全景カメラの映像にも対応しました。</p>
-          
-          <p class="work__cta"><a class="work__link" href="https://dora9991.github.io/basketball-studio-web/" target="_blank" rel="noopener">ひらく<span aria-hidden="true"> ↗</span></a></p>
-        </div>
-      </article>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="sec sec--paper now" id="now" aria-labelledby="now-title">
-  <div class="wrap">
-    <header class="sec-head">
-      <p class="kicker">NOW</p>
-      <h2 class="sec-title" id="now-title">いま、前にある波</h2>
-      <p class="sec-lead">いちばん前にあるもの。ほかは背景で休ませています。</p>
-    </header>
-    <ol class="now__list">
-      <li class="now__item"><span class="tag">公開</span><h3 class="now__title"><a href="#w-ai-violinist">AIバイオリニスト</a></h3><p>曲を入れると、AI がバイオリンのパートを書き足します。10月11日に公開しました。聴き込みながら、少しずつ直しています。</p></li>
-      <li class="now__item"><span class="tag">公開</span><h3 class="now__title"><a href="#w-math-labo-third">数学ラボ3 の新しい版</a></h3><p>10月9日に、裏ボス「夜の訪問者」と、みんなで戦うモードを公開しました。</p></li>
-      <li class="now__item"><span class="tag">本格化</span><h3 class="now__title"><a href="#w-math-hunter">竜狩りの谷（数学ハンター）</a></h3><p>生徒に見せたら「いくら課金したらできますか？」「先生、何者ですか？」。数式バトルだけに絞って、育てています。</p></li>
-      <li class="now__item"><span class="tag">公開</span><h3 class="now__title"><a href="#w-kantan-seiseki">かんたん成績</a></h3><p>成績をつける手間を軽く。観点別のA・B・Cから5段階評定まで、ルールは見えて、あとから変えられます。</p></li>
-      <li class="now__item"><span class="tag">実験中</span><h3 class="now__title"><a href="#w-my-composer-ai">自分用の作曲AI</a></h3><p>手元で動く作曲AIを試しています。持っている楽器の音源で鳴らせるかを、確かめているところです。</p></li>
-      <li class="now__item"><span class="tag">執筆中</span><h3 class="now__title"><a href="#books">AIとつくる 知見集</a></h3><p>指示のしかた、返ってきたものの見方、モデルの選び方を、実際のやりとりから。最初の一歩は note から出す予定です。</p></li>
-    </ol>
-  </div>
-</section>
-
-<section class="sec sec--paper books" id="books" aria-labelledby="books-title">
-  <div class="wrap">
-    <header class="sec-head">
-      <p class="kicker">BOOKS</p>
-      <h2 class="sec-title" id="books-title">本</h2>
-      <p class="sec-lead">別の名前で出している本と、いま書いている原稿です。</p>
-    </header>
-    <div class="published">
-      <h3 class="sub-title">すでに出している本</h3>
-      <article class="pub">
-        <div class="pub__main">
-          <p class="pub__status">Kindle ／ 別の名前で</p>
-          <h4 class="pub__name">心康太郎<small>名義</small></h4>
-          <p class="pub__text">人間関係や、気持ちの悩みに寄りそう本を、「心ラクシリーズ」として書いています。</p>
-          <ul class="pub__genres"><li>職場の人間関係</li><li>自信・自己肯定感</li><li>家族・夫婦</li><li>友人関係・SNS</li><li>中学生・教育</li></ul>
-          <div class="pub__picks">
-            <h5 class="pub__picks-title">シリーズの本から</h5>
-            <ul><li><a href="https://www.amazon.co.jp/dp/B0FX5DNGV2" target="_blank" rel="noopener"><span class="pub__pick-title">他人に振り回される優しいあなたへ</span><span class="pub__pick-sub">“自分軸”で生きる心の整え方</span></a></li><li><a href="https://www.amazon.co.jp/dp/B0DP2H7XWD" target="_blank" rel="noopener"><span class="pub__pick-title">嫌われても大丈夫！職場の人間関係に疲れたあなたへ</span><span class="pub__pick-sub">無理に仲良くしなくても仕事はうまくいく</span></a></li><li><a href="https://www.amazon.co.jp/dp/B0DSYBS4HY" target="_blank" rel="noopener"><span class="pub__pick-title">もう頑張れないあなたへ　燃え尽きた心を、少しずつ取り戻す本</span><span class="pub__pick-sub">自分を取り戻す、静かなリハビリ</span></a></li><li><a href="https://www.amazon.co.jp/dp/B0G2LGVPW1" target="_blank" rel="noopener"><span class="pub__pick-title">完璧主義を手放すことでラクに生きる本</span><span class="pub__pick-sub">ちゃんとしなきゃから自由になる心の整え方</span></a></li></ul>
-          </div>
-          <p class="pub__cta"><a class="pub__link" href="https://www.amazon.co.jp/stores/author/B0FWRX8G9K" target="_blank" rel="noopener">Amazon の著者ページをひらく（58冊）<span aria-hidden="true"> ↗</span></a></p>
-        </div>
-        <div class="pub__count"><span class="pub__n">58<small>冊</small></span><span class="pub__since">2025年8月〜</span></div>
-      </article>
-    </div>
-    <h3 class="sub-title sub-title--drafts">いま書いている本</h3>
-    <p class="sub-lead">原稿の段階の本です。書きあがったら、ここでお知らせします。</p>
-    <ul class="shelf">
-      <li class="book" style="--i:0"><span class="book__status">執筆中</span><h3 class="book__title">AIとつくる 知見集</h3><p class="book__sub">指示のしかた・返ってきたものの見方・モデルの選び方</p><p class="book__note">本文34節とケース集20件</p></li>
-      <li class="book" style="--i:1"><span class="book__status">執筆中</span><h3 class="book__title">どうやって作ったか</h3><p class="book__sub">机とお金と、最初の一言／指示の実物／作り方カード</p><p class="book__note">2巻と別冊</p></li>
-      <li class="book" style="--i:2"><span class="book__status">初稿</span><h3 class="book__title">いま作っているものぜんぶ</h3><p class="book__sub">いま取り組んでいることの、全部の記録</p><p class="book__note">約7万9千字</p></li>
-      <li class="book" style="--i:3"><span class="book__status">原稿</span><h3 class="book__title">遊んでいたら、アプリができていました</h3><p class="book__sub">先生向けの入門書</p><p class="book__note">11章</p></li>
-      <li class="book" style="--i:4"><span class="book__status">原稿</span><h3 class="book__title">テストは、自分の手で軽くできる</h3></li>
-      <li class="book" style="--i:5"><span class="book__status">原稿</span><h3 class="book__title">数学ラボ4 メイキングブック</h3><p class="book__sub">数学ラボ4 をどうつくったか</p></li>
-      <li class="book" style="--i:6"><span class="book__status">原稿</span><h3 class="book__title">AIエージェント仕事革命</h3></li>
-    </ul>
-  </div>
-</section>
-
-<section class="sec sec--dusk charge" id="charge" aria-labelledby="charge-title">
-  <div class="wrap">
-    <header class="sec-head">
-      <p class="kicker">CHARGE</p>
-      <h2 class="sec-title" id="charge-title">音と探究</h2>
-      <p class="sec-lead">「何の役に立つか」では測らない時間。ここは削らずに守ります。</p>
-    </header>
-    <div class="charge__grid">
-      <div class="charge__block"><h3>音楽</h3><p>リコーダーから始まり、吹奏楽、クラシックギター、ピアノ。作曲や編曲もします。いまは、音楽を自分の電池にするだけでなく、作ったり演奏したりして、相手に届け、感動を与えたいと思っています。ゲームの物語の場面に流れる音楽も、AI の力を借りてつくりました。</p></div>
-      <div class="charge__block"><h3>数学の探究</h3><p>リーマン予想、ナビエ–ストークス方程式。解けていない問題に、自分の手でさわってみます。生徒に伝えたい「暗記ではなく、発見の楽しさ」を、まず自分でやってみるための時間です。うまくいかなかったことも、正直に記録しています。</p></div>
-    </div>
-    <aside class="channel" aria-label="YouTube">
-      <p class="channel__tag">YouTube</p>
-      <h3 class="channel__title">Alhan&#39;s DTM Room【アルの作曲部屋】</h3>
-      <p class="channel__text">「だれでも楽しくDTM（パソコンでの作曲）ができるチャンネル」を目指して、2023年9月に動画を投稿しはじめました。作曲のしかたを、わかりやすく解説しています。動画は51本、登録してくれている人は1,530人です。いまはお休み中です。</p>
-      <div class="yt" data-yt="DQvjvNPfRmg">
-        <a class="yt__btn" href="https://www.youtube.com/watch?v=DQvjvNPfRmg" target="_blank" rel="noopener" aria-label="動画を再生する：【作曲の仕方】ケルト音楽の作り方をわかりやすく解説">
-          <img class="yt__thumb" src="assets/yt-celtic.jpg" alt="" width="480" height="360" loading="lazy">
-          <span class="yt__play" aria-hidden="true"></span>
-          <span class="yt__cap"><span class="yt__title">【作曲の仕方】ケルト音楽の作り方をわかりやすく解説</span><span class="yt__views">2.1万回視聴</span></span>
-        </a>
-      </div>
-      <div class="channel__videos">
-        <h4 class="channel__videos-title">よく見られている動画</h4>
-        <ul><li><a href="https://www.youtube.com/watch?v=4fvT-_dpV1M" target="_blank" rel="noopener"><span class="channel__v-title">【初心者必見！】かっこいいメロディを作る方法を解説</span><span class="channel__v-views">1.2万回視聴</span></a></li><li><a href="https://www.youtube.com/watch?v=h_R8k6T7pzo" target="_blank" rel="noopener"><span class="channel__v-title">【作業画面大公開】フュージョン・Jazz Funk系の曲の作り方</span><span class="channel__v-views">7,883回視聴</span></a></li></ul>
-        <p class="channel__asof">登録者数・再生数は 2026年10月10日 時点</p>
-      </div>
-      <p class="channel__cta"><a class="channel__link" href="https://www.youtube.com/@alhan9" target="_blank" rel="noopener">チャンネルをひらく<span aria-hidden="true"> ↗</span></a></p>
-    </aside>
-  </div>
-</section>
-
-<section class="sec sec--paper values" id="values" aria-labelledby="values-title">
-  <div class="wrap">
-    <header class="sec-head">
-      <p class="kicker">LAYERS</p>
-      <h2 class="sec-title" id="values-title">大切にしていること</h2>
-      
-    </header>
-    <ul class="layers">
-      <li class="layer"><span class="layer__no">01</span><h3>充電する</h3><p>作曲、演奏、数学の探究。自分の電池そのもの。</p></li>
-      <li class="layer"><span class="layer__no">02</span><h3>創る</h3><p>ゲーム、アプリ、物語。いまの波が選んだひとつに絞る。</p></li>
-      <li class="layer"><span class="layer__no">03</span><h3>掛け算する</h3><p>つくったものが、だれかに使われ、直され、持ち寄られていくこと。</p></li>
-    </ul>
-    <div class="nots">
-      <h3 class="nots__title">しないと決めていること</h3>
-      <ul><li>完璧を求めて、だれかを追いこむこと</li><li>「もっと頑張れ」と言うこと</li><li>自分がいないと止まる仕組みにすること</li><li>つくり足すことを「よくした」と思いこむこと</li></ul>
-    </div>
-  </div>
-</section>
-
 <section class="closing" aria-labelledby="closing-title">
   <div class="closing__art" aria-hidden="true"><img src="assets/dawn.jpg" alt="" width="1672" height="941" loading="lazy"></div>
   <div class="wrap narrow closing__in">
@@ -756,9 +159,16 @@
 
 <footer class="foot">
   <div class="wrap foot__in">
-    <p class="foot__name">kazu</p>
-    <p class="foot__note">作品の画面は、それぞれの公開ページから。絵は「数学ラボ3」のものです。</p>
-    <p class="foot__copy">© 2026 kazu</p>
+    <div class="foot__row">
+      <p class="foot__name">kazu</p>
+      <nav class="foot__nav" aria-label="ページの一覧">
+        <a href="index.html">ホーム</a><a href="listen.html">聴く</a><a href="about.html">わたし</a><a href="journey.html">歩み</a><a href="works.html">つくったもの</a><a href="now.html">いま</a><a href="books.html">本</a><a href="charge.html">音と探究</a>
+      </nav>
+    </div>
+    <div class="foot__row foot__row--sub">
+      <p class="foot__note">作品の画面は、それぞれの公開ページから。絵は「数学ラボ3」のものです。</p>
+      <p class="foot__copy">© 2026 kazu</p>
+    </div>
   </div>
 </footer>
 </body>

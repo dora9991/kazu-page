@@ -481,3 +481,95 @@ button:focus-visible,input:focus-visible { outline: 2px solid var(--gold); outli
   html.js .reveal.is-waiting { opacity: 1; transform: none; }
   .read-progress { display: none; }
 }
+
+/* ---- 2026-10-13 追加：上のタグごとのページ（ホーム・ページの先頭の帯・入口カード・前へ／次へ・足もとの一覧） ---- */
+.topbar__nav a[aria-current] { color: var(--gold); border-bottom-color: var(--gold); }
+.topbar__name { display: inline-flex; align-items: center; }
+
+/* ほかのページの先頭：夜の絵を低い帯にして、見出しを大きく置く */
+.hero--page { min-height: 0; display: block; }
+.hero--page .hero__art { inset: 0; }
+.hero--page .hero__art img { object-position: var(--ax, 60%) var(--ay, 50%); }
+.hero--page::after { background: linear-gradient(90deg,#101b34 0%,#101b34f2 34%,#101b3499 72%,#101b3466 100%); }
+.hero--page .hero__in { padding-block: 60px 56px; }
+.hero--page .kicker { margin-bottom: 8px; }
+.hero__name--page { font: 500 clamp(32px,4.2vw,52px)/1.5 var(--serif); letter-spacing: .06em; margin: 0; }
+.hero--page .hero__lead { max-width: 560px; margin-top: 16px; line-height: 1.95; }
+.hero--page + .sec { padding-top: 72px; }
+
+/* ホームの入口カード */
+.gate { padding-block: 92px 100px; }
+.gate .sec-head { margin-bottom: 40px; }
+.gate__list { display: grid; grid-template-columns: repeat(12,minmax(0,1fr)); gap: 20px; }
+.gate__item { grid-column: span 3; }
+.gate__item:nth-child(-n+3) { grid-column: span 4; }
+.gate__card { position: relative; display: flex; flex-direction: column; height: 100%; min-height: 214px; padding: 28px 28px 22px; border: 1px solid var(--rule); background: #fbf9f4; color: var(--ink); text-decoration: none; transition: border-color 220ms,background-color 220ms,transform 220ms,box-shadow 220ms; }
+.gate__no { position: absolute; top: 16px; right: 22px; font: 500 36px/1 var(--roman); color: #dcd6c8; }
+.gate__kicker { font: 500 11px/1.6 var(--roman); letter-spacing: .22em; color: #68604f; }
+.gate__label { font: 600 26px/1.5 var(--serif); letter-spacing: .04em; margin-top: 6px; }
+.gate__blurb { font-size: 14px; line-height: 1.85; color: var(--muted); margin-top: 10px; }
+.gate__go { margin-top: auto; padding-top: 18px; font-size: 20px; line-height: 1; color: #8a6a2c; transition: transform 220ms; }
+.gate__card:hover,.gate__card:focus-visible { border-color: #b59a62; background: #fff; transform: translateY(-2px); box-shadow: 0 16px 26px -20px #101b3499; }
+.gate__card:hover .gate__go,.gate__card:focus-visible .gate__go { transform: translateX(6px); }
+.gate__card:focus-visible { outline: 2px solid #947039; outline-offset: 4px; }
+
+/* 前へ／次へ */
+.pager { background: var(--paper); border-top: 1px solid var(--rule); padding: 48px 0 56px; }
+.pager__in { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
+.pager__link { display: flex; flex-direction: column; gap: 4px; min-height: 124px; padding: 20px 26px 22px; border: 1px solid var(--rule); background: #fbf9f4; color: var(--ink); text-decoration: none; transition: border-color 220ms,background-color 220ms,transform 220ms; }
+.pager__link--next { align-items: flex-end; text-align: right; }
+.pager__dir { font: 500 12px/1.8 var(--roman); letter-spacing: .12em; color: #6e5b3a; }
+.pager__label { font: 600 22px/1.5 var(--serif); letter-spacing: .04em; }
+.pager__blurb { font-size: 13px; line-height: 1.8; color: var(--muted); }
+.pager__link:hover,.pager__link:focus-visible { border-color: #b59a62; background: #fff; transform: translateY(-2px); }
+.pager__link:focus-visible { outline: 2px solid #947039; outline-offset: 4px; }
+
+/* 足もとの一覧 */
+.foot__in { display: block; }
+.foot__row { display: flex; align-items: center; flex-wrap: wrap; gap: 8px 32px; }
+.foot__row--sub { margin-top: 12px; padding-top: 14px; border-top: 1px solid #ffffff1f; }
+.foot__nav { display: flex; flex-wrap: wrap; gap: 0 4px; margin-left: auto; }
+.foot__nav a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; font-size: 13px; color: #d2d8e2; text-decoration: none; }
+.foot__nav a:hover,.foot__nav a:focus-visible { color: var(--gold); }
+
+/* ページをまたぐときは、目次を動かさず、中身だけをやわらかく入れかえる（対応していないブラウザでは、ふつうに切りかわる） */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+  .topbar { view-transition-name: topbar; }
+  ::view-transition-old(root),::view-transition-new(root) { animation-duration: 240ms; }
+}
+
+@media (max-width: 1000px) {
+  .gate__item,.gate__item:nth-child(-n+3) { grid-column: span 6; }
+  .gate__item:last-child:nth-child(odd) { grid-column: 1 / -1; }
+  .hero--page .hero__in { padding-block: 52px 48px; }
+}
+@media (max-width: 760px) {
+  .foot__nav { margin-left: -10px; }
+}
+@media (max-width: 600px) {
+  .hero--page { min-height: 0; align-items: stretch; }
+  .hero--page .hero__art { inset: 0; height: auto; }
+  .hero--page::after { background: linear-gradient(90deg,#101b34f7 0%,#101b34e0 55%,#101b34a0 100%); }
+  .hero--page .hero__in { padding: 40px 0 36px; }
+  .hero__name--page { font-size: 30px; }
+  .hero--page .hero__lead { margin-top: 12px; }
+  .hero--page + .sec { padding-top: 48px; }
+  .gate { padding-block: 64px 72px; }
+  .gate__list { grid-template-columns: minmax(0,1fr); gap: 14px; }
+  .gate__item,.gate__item:nth-child(-n+3),.gate__item:last-child:nth-child(odd) { grid-column: auto; }
+  .gate__card { min-height: 0; padding: 22px 22px 18px; }
+  .gate__label { font-size: 23px; }
+  .gate__go { padding-top: 12px; }
+  .pager { padding: 36px 0 44px; }
+  .pager__in { grid-template-columns: minmax(0,1fr); gap: 14px; }
+  .pager__link,.pager__link--next { min-height: 0; align-items: flex-start; text-align: left; padding: 18px 20px 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gate__card:hover,.gate__card:focus-visible,.pager__link:hover,.pager__link:focus-visible { transform: none; }
+  .gate__card:hover .gate__go,.gate__card:focus-visible .gate__go { transform: none; }
+}
+/* 夜の節がすぐ下に続くときは、先頭の帯の下の縁を夜に溶かす */
+.hero--page:has(+ .sec--night)::after { background: linear-gradient(0deg,#101b34 0%,#101b3400 46%),linear-gradient(90deg,#101b34 0%,#101b34f2 34%,#101b3499 72%,#101b3466 100%); }
+.hero--page + .sec--night { padding-top: 40px; }
+.listen + .pager { border-top: 0; }

@@ -2,7 +2,7 @@
 *
 !.gitignore
 !.nojekyll
-!index.html
+!*.html
 !style.css
 !script.js
 !assets/

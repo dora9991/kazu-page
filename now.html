@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>いま — kazu</title>
+<meta name="description" content="いま、いちばん前にあるもの。">
+<meta property="og:title" content="いま — kazu">
+<meta property="og:description" content="いま、いちばん前にあるもの。">
+<meta property="og:type" content="profile">
+<meta name="theme-color" content="#0c1732">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body data-page="now">
+<a class="skip" href="#main">本文へ移動</a>
+<header class="topbar">
+  <div class="wrap topbar__in">
+    <a class="topbar__name" href="index.html">kazu</a>
+    <nav class="topbar__nav" aria-label="ページの切りかえ">
+      <a href="listen.html">聴く</a>
+      <a href="about.html">わたし</a>
+      <a href="journey.html">歩み</a>
+      <a href="works.html">つくったもの</a>
+      <a href="now.html" aria-current="page">いま</a>
+      <a href="books.html">本</a>
+      <a href="charge.html">音と探究</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero hero--page" aria-labelledby="page-title" style="--ax:66%;--ay:28%">
+  <div class="hero__art" aria-hidden="true"><img src="assets/night.jpg" alt="" width="1672" height="941"></div>
+  <div class="wrap hero__in">
+    <p class="kicker">NOW</p>
+    <h1 class="hero__name hero__name--page" id="page-title">いま、前にある波</h1>
+    <p class="hero__lead">いちばん前にあるもの。ほかは背景で休ませています。</p>
+  </div>
+</section>
+
+<section class="sec sec--paper now" id="now" aria-label="いま、前にある波">
+  <div class="wrap">
+    
+    <ol class="now__list">
+      <li class="now__item"><span class="tag">公開</span><h3 class="now__title"><a href="works.html#w-ai-violinist">AIバイオリニスト</a></h3><p>曲を入れると、AI がバイオリンのパートを書き足します。10月11日に公開しました。聴き込みながら、少しずつ直しています。</p></li>
+      <li class="now__item"><span class="tag">公開</span><h3 class="now__title"><a href="works.html#w-math-labo-third">数学ラボ3 の新しい版</a></h3><p>10月9日に、裏ボス「夜の訪問者」と、みんなで戦うモードを公開しました。</p></li>
+      <li class="now__item"><span class="tag">本格化</span><h3 class="now__title"><a href="works.html#w-math-hunter">竜狩りの谷（数学ハンター）</a></h3><p>生徒に見せたら「いくら課金したらできますか？」「先生、何者ですか？」。数式バトルだけに絞って、育てています。</p></li>
+      <li class="now__item"><span class="tag">公開</span><h3 class="now__title"><a href="works.html#w-kantan-seiseki">かんたん成績</a></h3><p>成績をつける手間を軽く。観点別のA・B・Cから5段階評定まで、ルールは見えて、あとから変えられます。</p></li>
+      <li class="now__item"><span class="tag">実験中</span><h3 class="now__title"><a href="works.html#w-my-composer-ai">自分用の作曲AI</a></h3><p>手元で動く作曲AIを試しています。持っている楽器の音源で鳴らせるかを、確かめているところです。</p></li>
+      <li class="now__item"><span class="tag">執筆中</span><h3 class="now__title"><a href="books.html">AIとつくる 知見集</a></h3><p>指示のしかた、返ってきたものの見方、モデルの選び方を、実際のやりとりから。最初の一歩は note から出す予定です。</p></li>
+    </ol>
+  </div>
+</section>
+
+<nav class="pager" aria-label="ほかのページへ">
+  <div class="wrap pager__in">
+    <a class="pager__link pager__link--prev" href="works.html" rel="prev"><span class="pager__dir">← 前へ</span><span class="pager__label">つくったもの</span><span class="pager__blurb">23の作品を、星図で。いま遊べるものもあります。</span></a>
+    <a class="pager__link pager__link--next" href="books.html" rel="next"><span class="pager__dir">次へ →</span><span class="pager__label">本</span><span class="pager__blurb">出している本と、いま書いている原稿。</span></a>
+  </div>
+</nav>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div class="foot__row">
+      <p class="foot__name">kazu</p>
+      <nav class="foot__nav" aria-label="ページの一覧">
+        <a href="index.html">ホーム</a><a href="listen.html">聴く</a><a href="about.html">わたし</a><a href="journey.html">歩み</a><a href="works.html">つくったもの</a><a href="now.html">いま</a><a href="books.html">本</a><a href="charge.html">音と探究</a>
+      </nav>
+    </div>
+    <div class="foot__row foot__row--sub">
+      <p class="foot__note">作品の画面は、それぞれの公開ページから。絵は「数学ラボ3」のものです。</p>
+      <p class="foot__copy">© 2026 kazu</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

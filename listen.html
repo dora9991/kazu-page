@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>聴く — kazu</title>
+<meta name="description" content="物語の場面のためにつくった曲を、4つ。ボタンを押すと流れます。">
+<meta property="og:title" content="聴く — kazu">
+<meta property="og:description" content="物語の場面のためにつくった曲を、4つ。ボタンを押すと流れます。">
+<meta property="og:type" content="profile">
+<meta name="theme-color" content="#0c1732">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body data-page="listen">
+<a class="skip" href="#main">本文へ移動</a>
+<header class="topbar">
+  <div class="wrap topbar__in">
+    <a class="topbar__name" href="index.html">kazu</a>
+    <nav class="topbar__nav" aria-label="ページの切りかえ">
+      <a href="listen.html" aria-current="page">聴く</a>
+      <a href="about.html">わたし</a>
+      <a href="journey.html">歩み</a>
+      <a href="works.html">つくったもの</a>
+      <a href="now.html">いま</a>
+      <a href="books.html">本</a>
+      <a href="charge.html">音と探究</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="hero hero--page" aria-labelledby="page-title" style="--ax:30%;--ay:62%">
+  <div class="hero__art" aria-hidden="true"><img src="assets/night.jpg" alt="" width="1672" height="941"></div>
+  <div class="wrap hero__in">
+    <p class="kicker">LISTEN</p>
+    <h1 class="hero__name hero__name--page" id="page-title">まず、音から。</h1>
+    <p class="hero__lead">ゲームの物語の場面のためにつくった曲です（AI の力を借りています）。ボタンを押すと流れます。</p>
+  </div>
+</section>
+
+<section class="sec sec--night listen" id="listen" aria-label="まず、音から。">
+  <div class="wrap">
+    
+    <ol class="tracks">
+      <li class="track" data-track>
+        <span class="track__no" aria-hidden="true">01</span>
+        <div class="track__body">
+          <h3 class="track__title">窓をたたく白い羽</h3>
+          <p class="track__note">ふしぎで、わくわくする夜空。物語のはじまり。</p>
+          <audio class="track__audio" controls preload="none" src="https://dora9991.github.io/math-labo-third/bgm/story_prologue.m4a">この端末では音を再生できません。</audio>
+        </div>
+      </li>
+      <li class="track" data-track>
+        <span class="track__no" aria-hidden="true">02</span>
+        <div class="track__body">
+          <h3 class="track__title">天文台のひととき</h3>
+          <p class="track__note">あたたかくて、少しユーモラスな、ふだんの時間。</p>
+          <audio class="track__audio" controls preload="none" src="https://dora9991.github.io/math-labo-third/bgm/story_daily.m4a">この端末では音を再生できません。</audio>
+        </div>
+      </li>
+      <li class="track" data-track>
+        <span class="track__no" aria-hidden="true">03</span>
+        <div class="track__body">
+          <h3 class="track__title">オルゴールの記憶</h3>
+          <p class="track__note">なつかしくて、せつない、小さな音。</p>
+          <audio class="track__audio" controls preload="none" src="https://dora9991.github.io/math-labo-third/bgm/story_memory.m4a">この端末では音を再生できません。</audio>
+        </div>
+      </li>
+      <li class="track" data-track>
+        <span class="track__no" aria-hidden="true">04</span>
+        <div class="track__body">
+          <h3 class="track__title">ただいま、の朝</h3>
+          <p class="track__note">あたたかい安堵。物語の、ひとつの終わり。</p>
+          <audio class="track__audio" controls preload="none" src="https://dora9991.github.io/math-labo-third/bgm/story_epilogue_g1.m4a">この端末では音を再生できません。</audio>
+        </div>
+      </li>
+    </ol>
+    <p class="listen__from">数学ラボ3 の物語の場面で、流れています。 <a class="listen__game" href="https://dora9991.github.io/math-labo-third/" target="_blank" rel="noopener">ゲームをあそんでみる<span aria-hidden="true"> ↗</span></a></p>
+  </div>
+</section>
+
+<nav class="pager" aria-label="ほかのページへ">
+  <div class="wrap pager__in">
+    <a class="pager__link pager__link--prev" href="index.html" rel="prev"><span class="pager__dir">← 前へ</span><span class="pager__label">ホーム</span><span class="pager__blurb">はじめにもどる。</span></a>
+    <a class="pager__link pager__link--next" href="about.html" rel="next"><span class="pager__dir">次へ →</span><span class="pager__label">わたし</span><span class="pager__blurb">どんな人か。根っこにあるものと、大切にしていること。</span></a>
+  </div>
+</nav>
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div class="foot__row">
+      <p class="foot__name">kazu</p>
+      <nav class="foot__nav" aria-label="ページの一覧">
+        <a href="index.html">ホーム</a><a href="listen.html">聴く</a><a href="about.html">わたし</a><a href="journey.html">歩み</a><a href="works.html">つくったもの</a><a href="now.html">いま</a><a href="books.html">本</a><a href="charge.html">音と探究</a>
+      </nav>
+    </div>
+    <div class="foot__row foot__row--sub">
+      <p class="foot__note">作品の画面は、それぞれの公開ページから。絵は「数学ラボ3」のものです。</p>
+      <p class="foot__copy">© 2026 kazu</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

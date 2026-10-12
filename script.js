@@ -1,19 +1,11 @@
-// 目次の「いま見ているところ」に印をつける。JavaScript が動かなくても、ページはそのまま読める
+// 以前は1枚のページだった。「…/#works」のような古いリンクで開かれたら、いまのページへ送る
 (() => {
   'use strict';
-  const links = [...document.querySelectorAll('.topbar__nav a')];
-  const targets = links.map((a) => document.querySelector(a.getAttribute('href'))).filter(Boolean);
-  if (!('IntersectionObserver' in window) || !targets.length) return;
-  const io = new IntersectionObserver((entries) => {
-    for (const e of entries) {
-      if (!e.isIntersecting) continue;
-      for (const a of links) {
-        if (a.getAttribute('href') === '#' + e.target.id) a.setAttribute('aria-current', 'true');
-        else a.removeAttribute('aria-current');
-      }
-    }
-  }, { rootMargin: '-45% 0px -50% 0px' });
-  targets.forEach((t) => io.observe(t));
+  const h = decodeURIComponent(location.hash.slice(1));
+  if (!h || document.body.dataset.page !== 'home' || document.getElementById(h)) return;
+  const pages = { about: 'about.html', core: 'about.html#core', values: 'about.html#values', journey: 'journey.html', works: 'works.html', now: 'now.html', books: 'books.html', charge: 'charge.html' };
+  const to = pages[h] || (/^(w-|lane-)/.test(h) ? 'works.html#' + h : null);
+  if (to) location.replace(to);
 })();
 
 // ---- 聴く：一度に1曲だけ。JavaScript が動かないときは、ふつうの再生バーがそのまま使える ----
@@ -99,15 +91,17 @@
   const syncHeader = () => root.style.setProperty('--bar-height', `${header.offsetHeight}px`);
   syncHeader();
   if ('ResizeObserver' in window) new ResizeObserver(syncHeader).observe(header);
+  // スマホでは目次が横にスクロールする。いまのページのタグが、はじめから真ん中に見えるように寄せる
   const centerCurrent = () => {
-    const current = nav.querySelector('[aria-current="true"]');
+    const current = nav.querySelector('[aria-current]');
     if (current && nav.scrollWidth > nav.clientWidth) {
       const item = current.getBoundingClientRect();
       const box = nav.getBoundingClientRect();
-      nav.scrollTo({ left: nav.scrollLeft + item.left - box.left - (box.width - item.width) / 2, behavior: motion.matches ? 'auto' : 'smooth' });
+      nav.scrollTo({ left: nav.scrollLeft + item.left - box.left - (box.width - item.width) / 2, behavior: 'auto' });
     }
   };
-  new MutationObserver(centerCurrent).observe(nav, { attributes: true, subtree: true, attributeFilter: ['aria-current'] });
+  centerCurrent();
+  addEventListener('load', centerCurrent, { once: true });
   if (!('IntersectionObserver' in window)) return;
   let cleanup = () => {};
   function setup() {
@@ -172,7 +166,7 @@
         io.unobserve(el);
       }
     }, { threshold: .08 });
-    const reveal = [...document.querySelectorAll('.sec-head,.prose p,.profile,.bundle,.journey__item,.motto__text,.work,.now__item,.book,.pub,.charge__block,.channel,.layer,.closing__in')];
+    const reveal = [...document.querySelectorAll('.sec-head,.prose p,.profile,.bundle,.journey__item,.motto__text,.work,.now__item,.book,.pub,.charge__block,.channel,.layer,.closing__in,.gate__item,.pager__link')];
     root.classList.add('js');
     for (const el of reveal) {
       el.classList.add('reveal');
