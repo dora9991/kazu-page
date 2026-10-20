@@ -573,3 +573,42 @@ button:focus-visible,input:focus-visible { outline: 2px solid var(--gold); outli
 .hero--page:has(+ .sec--night)::after { background: linear-gradient(0deg,#101b34 0%,#101b3400 46%),linear-gradient(90deg,#101b34 0%,#101b34f2 34%,#101b3499 72%,#101b3466 100%); }
 .hero--page + .sec--night { padding-top: 40px; }
 .listen + .pager { border-top: 0; }
+
+/* ---- 2026-10-20 追加：短い自己紹介ページ（me.html）。URL や QR で渡す名刺代わり。上のタグはなく、スクリプトも読まない ---- */
+.hero--me .hero__in { padding-block: 84px 72px; }
+.hero--me .hero__name { font-size: clamp(76px,12vw,112px); margin: 12px 0 14px; }
+.hero--me .hero__statement { font-size: clamp(23px,3.4vw,32px); max-width: 540px; }
+.hero--me .hero__statement .ph { display: block; }
+.hero--me::after { background: linear-gradient(90deg,#101b34 0%,#101b34f0 38%,#101b3480 74%,#101b3450 100%),linear-gradient(0deg,#101b3480,transparent 45%); }
+.me-about .prose { max-width: 36em; }
+.me-about .prose p + p { margin-top: 22px; }
+.me-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 30px; }
+.me-chips li { font-size: 13px; line-height: 1.7; padding: 4px 14px; border: 1px solid #b8b3a6; color: #4d5160; background: #fbf9f4; }
+.me-picks__list { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
+.me-card { display: flex; flex-direction: column; gap: 4px; height: 100%; min-height: 168px; padding: 22px 26px 18px; border: 1px solid #c3c8d4; background: #f7f8fb; color: var(--ink); text-decoration: none; transition: border-color 220ms,background-color 220ms,transform 220ms,box-shadow 220ms; }
+.me-card__for { font-size: 12px; line-height: 1.7; letter-spacing: .08em; color: #5b5470; }
+.me-card__title { font: 600 23px/1.5 var(--serif); letter-spacing: .03em; }
+.me-card__line { font-size: 14px; line-height: 1.85; color: var(--muted); }
+.me-card__go { margin-top: auto; padding-top: 12px; font-size: 13px; line-height: 1; color: #8a6a2c; }
+.me-card:hover,.me-card:focus-visible { border-color: #b59a62; background: #fff; transform: translateY(-2px); box-shadow: 0 16px 26px -20px #101b3499; }
+.me-card:focus-visible { outline: 2px solid #947039; outline-offset: 4px; }
+.me-next { text-align: center; padding-block: 84px 92px; }
+.me-next__block + .me-next__block { margin-top: 56px; padding-top: 48px; border-top: 1px solid #ffffff26; }
+.me-next__title { font: 500 clamp(22px,3vw,28px)/1.6 var(--serif); letter-spacing: .06em; }
+.me-next p { color: #d6dbe6; margin-top: 12px; }
+.me-next .me-next__cta { margin-top: 24px; }
+.me-next .btn--ghost { background: transparent; }
+@media (max-width: 760px) {
+  .me-picks__list { grid-template-columns: minmax(0,1fr); gap: 12px; }
+  .me-card { min-height: 0; padding: 20px 22px 16px; }
+}
+@media (max-width: 600px) {
+  .hero--me .hero__in { padding-block: 56px 48px; }
+  .hero--me .hero__name { font-size: 80px; }
+  .hero--me .hero__statement { font-size: 24px; }
+  .hero--me::after { background: linear-gradient(90deg,#101b34f5 0%,#101b34e0 55%,#101b34a8 100%); }
+  .me-next { padding-block: 60px 68px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .me-card:hover,.me-card:focus-visible { transform: none; }
+}
