@@ -738,8 +738,7 @@ a:focus-visible { outline-color: var(--accent); }
   .try-card:hover .try-card__shot img,.try-card:focus-visible .try-card__shot img { transform: none; }
 }
 
-/* ---- 2026-10-31 追加②：想い・生い立ち・道のり・活動・これから・ご相談（SILK） ---- */
-.topbar__who,.foot__who { font-size: 13px; font-weight: 500; color: var(--muted); margin-left: 10px; letter-spacing: .04em; }
+/* ---- 2026-10-31 追加②：想い・生い立ち・道のり・活動・これから・ご相談 ---- */
 .topbar__nav a.topbar__ask { align-self: center; min-height: 40px; padding: 0 16px; border: 0; border-radius: 999px; background: var(--sun); color: #2b2a24; font-weight: 500; }
 .topbar__nav a.topbar__ask:hover,.topbar__nav a.topbar__ask[aria-current] { background: #f6c785; color: #2b2a24; }
 .btn[data-soon] { opacity: .55; cursor: not-allowed; }
