@@ -1,13 +1,14 @@
 /* 夜に灯し、紙に綴り、朝へ手渡す。 */
 :root {
-  --paper: #f7f4ed; --ink: #263149; --muted: #626777;
+  --paper: #fbf7ef; --ink: #2b3247; --muted: #5f6475;
   --night: #101b34; --light: #f4f0e6; --gold: #ddc58e;
-  --rule: #d6d2c9; --serif: "Shippori Mincho", "Yu Mincho", "Hiragino Mincho ProN", serif;
-  --roman: "Cinzel", Georgia, serif;
+  --rule: #e4dccb; --serif: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Hiragino Sans", sans-serif;
+  --roman: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Hiragino Sans", sans-serif;
+  --sun: #f2b766; --accent: #9a5222; --label: #806443; --soft: #f3ede1; --card: #fffdf8; --line: #e8dfcd;
 }
 * { box-sizing: border-box; }
 html { scroll-padding-top: 100px; }
-body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Zen Kaku Gothic New", "Hiragino Sans", sans-serif; font-size: 16px; line-height: 1.85; -webkit-font-smoothing: antialiased; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "Hiragino Sans", sans-serif; font-size: 16px; line-height: 1.85; -webkit-font-smoothing: antialiased; }
 h1,h2,h3,p,figure,blockquote,ul,ol,dl,dd { margin: 0; }
 ul,ol { padding: 0; list-style: none; }
 a { color: inherit; text-underline-offset: .28em; text-decoration-thickness: 1px; }
@@ -611,4 +612,211 @@ button:focus-visible,input:focus-visible { outline: 2px solid var(--gold); outli
 }
 @media (prefers-reduced-motion: reduce) {
   .me-card:hover,.me-card:focus-visible { transform: none; }
+}
+
+/* ---- 2026-10-31 追加：とっつきやすく。明るい朝の色、丸いかたち、話しかける声で ---- */
+/* 文字は丸ゴシックひとつに。英語の小見出しは、小文字で小さく */
+.kicker,.gate__kicker,.channel__tag { font: 500 13px/1.6 var(--roman); letter-spacing: .14em; text-transform: lowercase; color: var(--label); }
+.sec-title,.hero__name--page,.closing__title,.core__quote,.motto__text,.me-next__title { font-weight: 700; letter-spacing: .03em; }
+.journey__title,.bundle__title,.lane__title,.track__title,.pub__name,.book__title,.gate__label,.pager__label,.me-card__title,.sub-title,.prelude__label,.yt__title,.channel__title,.now__title,.layer h3 { font-weight: 700; letter-spacing: .02em; }
+.hero__name { letter-spacing: 0; font-weight: 700; }
+.pub__name small { font: 400 14px var(--roman); }
+
+/* 上の帯と足もと：夜の紺から、明るい紙の色へ */
+.topbar { color: var(--ink); background: #fbf7efeb; border-bottom: 1px solid var(--line); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px); }
+.topbar__name { font: 700 26px/1 var(--roman); letter-spacing: .02em; }
+.topbar__nav a { color: #4f5567; font-size: 14px; justify-content: center; }
+.topbar__nav a:hover,.topbar__nav a[aria-current] { color: var(--accent); border-bottom-color: var(--sun); }
+.foot { background: #f1eadc; color: #4f5567; }
+.foot__name { font: 700 26px var(--roman); color: var(--ink); }
+.foot__nav a { color: #4f5567; }
+.foot__nav a:hover,.foot__nav a:focus-visible { color: var(--accent); }
+.foot__row--sub { border-top-color: #2b324714; }
+
+/* ボタンとカード：角をまるく */
+.btn { border-radius: 999px; border-color: #cfc6b4; background: var(--card); color: var(--ink); font-weight: 500; padding-inline: 26px; }
+.btn:hover { background: #fff; color: var(--ink); }
+.btn--primary { background: var(--sun); border-color: var(--sun); color: #2b2a24; }
+.btn--primary:hover { background: #f6c785; color: #2b2a24; }
+.gate__card,.pager__link,.me-card { border-radius: 20px; border-color: var(--line); background: var(--card); }
+.gate__card:hover,.gate__card:focus-visible,.pager__link:hover,.pager__link:focus-visible,.me-card:hover,.me-card:focus-visible { border-color: #e2c89c; box-shadow: 0 18px 30px -22px #5a4a2a66; }
+.gate__no { display: none; }
+.gate__go,.me-card__go { color: var(--accent); }
+.pager__dir { letter-spacing: .04em; color: var(--label); }
+.me-chips li,.pub__genres li,.stage { border-radius: 999px; }
+.book,.pub,.channel { border: 1px solid var(--line); border-radius: 18px; background: var(--card); box-shadow: none; }
+.book { min-height: 0; }
+.book:nth-child(2n) { border-left-color: var(--line); }
+.yt__btn { border-radius: 14px; overflow: hidden; }
+.pub { grid-template-columns: minmax(0,1fr); }
+.work__shot { border-radius: 12px; }
+a:focus-visible { outline-color: var(--accent); }
+
+/* ホームの先頭：朝の絵に、あいさつを置く */
+.hero--home { min-height: 600px; color: var(--ink); background: var(--paper); }
+.hero--home .hero__art { inset: 0 0 0 32%; }
+.hero--home .hero__art img { object-position: 50% 30%; }
+.hero--home .hero__art::before,.hero--home .hero__art::after { content: none; }
+.hero--home::after { background: linear-gradient(90deg,#fbf7ef 0%,#fbf7ef 33%,#fbf7efb8 50%,#fbf7ef10 80%),linear-gradient(0deg,#fbf7ef 0%,#fbf7ef00 24%); }
+.hero--home .kicker { color: var(--label); }
+.hero__hello { font: 700 clamp(40px,5.2vw,62px)/1.4 var(--roman); letter-spacing: .02em; margin: 6px 0 22px; }
+.hero__hello .ph { display: block; }
+.hero__me { background: linear-gradient(transparent 62%,#f7d699 62%,#f7d699 92%,transparent 92%); padding-inline: .08em; margin-right: .18em; }
+.hero--home .hero__lead { max-width: 470px; margin-top: 0; color: #474d60; }
+.hero--home .btn--ghost { background: #fffdf8d9; color: var(--ink); }
+.hero--home .hero__updated { color: var(--muted); background: #fffdf8d9; border-radius: 999px; padding: 2px 12px; }
+@media (prefers-reduced-motion: no-preference) {
+  .hero__hello { animation-delay: 150ms; }
+}
+
+/* ほかのページの先頭：昼のページは朝の絵、曲と星図のページ（聴く・つくったもの）は夜のまま */
+.hero--day { color: var(--ink); background: var(--paper); }
+.hero--day .hero__art { inset: 0 0 0 30%; }
+.hero--day .hero__art::before,.hero--day .hero__art::after { content: none; }
+.hero--day::after { background: linear-gradient(90deg,#fbf7ef 0%,#fbf7ef 32%,#fbf7efc2 52%,#fbf7ef30 100%); }
+.hero--day .kicker { color: var(--label); }
+.hero--day .hero__lead { color: #474d60; }
+
+/* さわってみる：いま遊べるもの・使えるものを、画面つきで */
+.try { padding-block: 88px 96px; }
+.try__list { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 24px; }
+.try-card { display: flex; flex-direction: column; height: 100%; background: var(--card); border: 1px solid var(--line); border-radius: 20px; overflow: hidden; color: var(--ink); text-decoration: none; transition: transform 220ms,box-shadow 220ms,border-color 220ms; }
+.try-card__shot { display: block; aspect-ratio: 16/10; background: #e9e3d6; overflow: hidden; }
+.try-card__shot img { width: 100%; height: 100%; object-fit: cover; transition: transform 450ms ease; }
+.try-card__body { display: flex; flex-direction: column; gap: 6px; flex: 1; padding: 18px 22px 20px; }
+.try-card__for { align-self: flex-start; font-size: 12px; line-height: 1.7; padding: 2px 12px; border-radius: 999px; background: #e5efe8; color: #2f5a3f; }
+.try-card__for--kids { background: #fde8d7; color: #87401a; }
+.try-card__for--teacher { background: #e4ecf7; color: #2f4e7a; }
+.try-card__for--music { background: #eee6f5; color: #5b3f78; }
+.try-card__title { font: 700 21px/1.5 var(--roman); margin-top: 4px; }
+.try-card__line { font-size: 14px; line-height: 1.85; color: var(--muted); }
+.try-card__go { margin-top: auto; padding-top: 10px; font-size: 14px; font-weight: 500; color: var(--accent); }
+.try-card:hover,.try-card:focus-visible { transform: translateY(-3px); border-color: #e2c89c; box-shadow: 0 18px 30px -22px #5a4a2a66; }
+.try-card:hover .try-card__shot img,.try-card:focus-visible .try-card__shot img { transform: scale(1.03); }
+.try-card:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
+.try__more { margin-top: 36px; text-align: center; }
+.try__more a,.lately__more a { display: inline-flex; align-items: center; min-height: 44px; color: var(--accent); font-weight: 500; text-decoration-color: #e2c89c; }
+
+/* このごろ：日記のように、短く */
+.lately { background: var(--soft); padding-block: 72px 64px; }
+.lately .sec-head { margin-bottom: 24px; }
+.lately__list { border-top: 1px dashed #d6cab2; }
+.lately__list li { display: grid; grid-template-columns: 60px minmax(0,1fr); gap: 12px; align-items: baseline; border-bottom: 1px dashed #d6cab2; }
+.lately__date { font-size: 13px; color: var(--label); font-variant-numeric: tabular-nums; }
+.lately__list a { display: block; min-height: 44px; padding-block: 12px; text-decoration: none; }
+.lately__list a:hover,.lately__list a:focus-visible { color: var(--accent); text-decoration: underline; text-decoration-color: #e2c89c; }
+.lately__more { margin-top: 12px; text-align: right; }
+
+/* おわりに：絵を置かず、明るい紙の上で */
+.closing--plain { min-height: 0; padding: 96px 0 104px; background: var(--soft); }
+.closing--plain::after { content: none; }
+.closing__title { font-size: clamp(28px,3.4vw,40px); }
+.closing .btn { background: var(--card); border-color: #cfc6b4; }
+
+@media (max-width: 1000px) {
+  .try__list { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
+}
+@media (max-width: 600px) {
+  .hero--home { min-height: 0; align-items: stretch; }
+  .hero--home .hero__art { inset: 0 0 auto; height: 300px; }
+  .hero--home .hero__art img { object-position: 55% 35%; }
+  .hero--home::after { background: linear-gradient(0deg,#fbf7ef 0%,#fbf7ef 52%,#fbf7efb3 64%,#fbf7ef00 82%); }
+  .hero--home .hero__in { padding: 200px 0 72px; }
+  .hero__hello { font-size: 36px; margin-bottom: 18px; }
+  .hero--home .hero__updated { right: 20px; bottom: 20px; }
+  .hero--day .hero__art { inset: 0; height: auto; }
+  .hero--day::after { background: linear-gradient(90deg,#fbf7eff7 0%,#fbf7efe6 58%,#fbf7efb3 100%); }
+  .try { padding-block: 64px 72px; }
+  .try__list { grid-template-columns: minmax(0,1fr); gap: 16px; }
+  .try-card__body { padding: 16px 18px 18px; }
+  .lately { padding-block: 56px 48px; }
+  .lately__list li { grid-template-columns: 48px minmax(0,1fr); gap: 8px; }
+  .closing--plain { padding: 72px 0 80px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .try-card:hover,.try-card:focus-visible { transform: none; }
+  .try-card:hover .try-card__shot img,.try-card:focus-visible .try-card__shot img { transform: none; }
+}
+
+/* ---- 2026-10-31 追加②：想い・生い立ち・道のり・活動・これから・ご相談（SILK） ---- */
+.topbar__who,.foot__who { font-size: 13px; font-weight: 500; color: var(--muted); margin-left: 10px; letter-spacing: .04em; }
+.topbar__nav a.topbar__ask { align-self: center; min-height: 40px; padding: 0 16px; border: 0; border-radius: 999px; background: var(--sun); color: #2b2a24; font-weight: 500; }
+.topbar__nav a.topbar__ask:hover,.topbar__nav a.topbar__ask[aria-current] { background: #f6c785; color: #2b2a24; }
+.btn[data-soon] { opacity: .55; cursor: not-allowed; }
+.btn[data-soon]:hover { transform: none; background: var(--sun); }
+
+/* 想い：三つの願いを、カードで */
+.wish__list { display: grid; gap: 12px; }
+.wish__item { display: flex; align-items: center; gap: 16px; padding: 18px 22px; border: 1px solid var(--line); border-radius: 18px; background: var(--card); font: 700 clamp(19px,2.3vw,24px)/1.6 var(--roman); }
+.wish__no { flex: none; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--sun); color: #2b2a24; font-size: 16px; }
+.wish__prose { margin-top: 44px; }
+.wish__links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+
+/* 生い立ち（わたし） */
+.roots-story { background: linear-gradient(140deg,#eeedf3,#e8edf0 60%,#f2eee6); }
+.journey__list--story { margin-top: 8px; }
+.journey__item a { color: var(--accent); }
+
+/* いま、していること */
+.acts { background: var(--soft); }
+.acts__list { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 20px; }
+.act { display: flex; flex-direction: column; gap: 8px; height: 100%; padding: 24px 22px 20px; border: 1px solid var(--line); border-radius: 20px; background: var(--card); color: var(--ink); text-decoration: none; transition: transform 220ms,box-shadow 220ms,border-color 220ms; }
+.act__icon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: #fde8d7; color: var(--accent); font-size: 18px; }
+.act__title { font: 700 20px/1.5 var(--roman); margin-top: 6px; }
+.act__line { font-size: 14px; line-height: 1.85; color: var(--muted); }
+.act__go { margin-top: auto; padding-top: 8px; font-size: 14px; font-weight: 500; color: var(--accent); }
+.act:hover,.act:focus-visible { transform: translateY(-3px); border-color: #e2c89c; box-shadow: 0 18px 30px -22px #5a4a2a66; }
+
+/* これから */
+.future { background: #eef3f6; }
+.future__big { font: 700 clamp(24px,3.2vw,36px)/1.6 var(--roman); margin-bottom: 28px; }
+
+/* ご相談への入口（ホームとご相談ページ） */
+.ask { padding: 88px 0; background: var(--paper); }
+.ask__in { text-align: center; background: #fff2dc; border-radius: 28px; padding: 56px 40px; }
+.ask__title { font: 700 clamp(24px,3vw,34px)/1.6 var(--roman); letter-spacing: .02em; margin-bottom: 16px; }
+.ask__in > p:not(.kicker) { max-width: 520px; margin-inline: auto; }
+.ask__cta { margin-top: 24px; }
+.ask__soon { margin-top: 12px; font-size: 13px; color: var(--muted); }
+
+/* 道のり：いま言えること・しんどい人へ */
+.motto__from:first-child { margin: 0 0 14px; font-size: 14px; }
+.care { padding-block: 56px; background: var(--paper); }
+.care__box { padding: 28px 32px; border: 1px solid #d5e2da; border-radius: 18px; background: #f1f6f3; }
+.care__title { font: 700 20px/1.6 var(--roman); margin-bottom: 10px; }
+.care__box p + p { margin-top: 10px; }
+.care__link a { display: inline-flex; align-items: center; min-height: 44px; color: #2f5a3f; font-weight: 500; }
+
+/* ご相談ページ */
+.req-cases { background: var(--soft); }
+.cases { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
+.case { padding: 22px 24px 24px; border: 1px solid var(--line); border-radius: 20px; background: var(--card); }
+.case__worry { padding: 14px 18px; border-radius: 14px; background: #fdf0e2; font-weight: 500; }
+.case__worry::before { content: "「"; } .case__worry::after { content: "」"; }
+.case__arrow { text-align: center; color: var(--label); margin: 6px 0; }
+.case__made a { font: 700 18px/1.6 var(--roman); color: var(--accent); }
+.case__made span { display: block; font-size: 14px; color: var(--muted); margin-top: 2px; }
+.steps { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 20px; }
+.step { padding: 22px 22px 24px; border: 1px solid var(--line); border-radius: 20px; background: var(--card); }
+.step__no { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--sun); color: #2b2a24; font-weight: 700; }
+.step__title { font: 700 18px/1.6 var(--roman); margin: 14px 0 8px; }
+.step p { font-size: 14px; color: var(--muted); }
+.req-notes { background: var(--soft); }
+.notes li { padding: 20px 0; border-bottom: 1px dashed #d6cab2; }
+.notes li:first-child { border-top: 1px dashed #d6cab2; }
+.notes h3 { font: 700 18px/1.6 var(--roman); margin-bottom: 6px; }
+.hero--page .hero__cta { margin-top: 24px; }
+
+@media (max-width: 1000px) {
+  .acts__list,.steps { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 600px) {
+  .acts__list,.steps,.cases { grid-template-columns: minmax(0,1fr); gap: 14px; }
+  .wish__item { padding: 14px 16px; gap: 12px; }
+  .ask { padding: 56px 0; }
+  .ask__in { padding: 40px 22px; border-radius: 22px; }
+  .care__box { padding: 22px 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .act:hover,.act:focus-visible { transform: none; }
 }

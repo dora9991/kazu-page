@@ -3,15 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>本 — kazu</title>
+<title>本 — SILK / kazu</title>
 <meta name="description" content="出している本と、いま書いている原稿。">
 <meta property="og:title" content="本 — kazu">
 <meta property="og:description" content="出している本と、いま書いている原稿。">
 <meta property="og:type" content="profile">
-<meta name="theme-color" content="#0c1732">
+<meta name="theme-color" content="#fbf7ef">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
 </head>
@@ -19,22 +19,23 @@
 <a class="skip" href="#main">本文へ移動</a>
 <header class="topbar">
   <div class="wrap topbar__in">
-    <a class="topbar__name" href="index.html">kazu</a>
+    <a class="topbar__name" href="index.html">SILK<span class="topbar__who">kazu</span></a>
     <nav class="topbar__nav" aria-label="ページの切りかえ">
-      <a href="listen.html">聴く</a>
       <a href="about.html">わたし</a>
       <a href="journey.html">歩み</a>
       <a href="works.html">つくったもの</a>
-      <a href="now.html">いま</a>
       <a href="books.html" aria-current="page">本</a>
+      <a href="listen.html">聴く</a>
       <a href="charge.html">音と探究</a>
+      <a href="now.html">いま</a>
+      <a class="topbar__ask" href="request.html">ご相談</a>
     </nav>
   </div>
 </header>
 
 <main id="main">
-<section class="hero hero--page" aria-labelledby="page-title" style="--ax:20%;--ay:45%">
-  <div class="hero__art" aria-hidden="true"><img src="assets/night.jpg" alt="" width="1672" height="941"></div>
+<section class="hero hero--page hero--day" aria-labelledby="page-title" style="--ax:20%;--ay:45%">
+  <div class="hero__art" aria-hidden="true"><img src="assets/dawn.jpg" alt="" width="1672" height="941"></div>
   <div class="wrap hero__in">
     <p class="kicker">BOOKS</p>
     <h1 class="hero__name hero__name--page" id="page-title">本</h1>
@@ -49,7 +50,7 @@
       <h3 class="sub-title">すでに出している本</h3>
       <article class="pub">
         <div class="pub__main">
-          <p class="pub__status">Kindle ／ 別の名前で</p>
+          <p class="pub__status">Kindle ／ 別の名前で ／ 2025年8月から</p>
           <h4 class="pub__name">心康太郎<small>名義</small></h4>
           <p class="pub__text">人間関係や、気持ちの悩みに寄りそう本を、「心ラクシリーズ」として書いています。</p>
           <ul class="pub__genres"><li>職場の人間関係</li><li>自信・自己肯定感</li><li>家族・夫婦</li><li>友人関係・SNS</li><li>中学生・教育</li></ul>
@@ -59,7 +60,6 @@
           </div>
           <p class="pub__cta"><a class="pub__link" href="https://www.amazon.co.jp/stores/author/B0FWRX8G9K" target="_blank" rel="noopener">Amazon の著者ページをひらく（58冊）<span aria-hidden="true"> ↗</span></a></p>
         </div>
-        <div class="pub__count"><span class="pub__n">58<small>冊</small></span><span class="pub__since">2025年8月〜</span></div>
       </article>
     </div>
     <h3 class="sub-title sub-title--drafts">いま書いている本</h3>
@@ -78,8 +78,8 @@
 
 <nav class="pager" aria-label="ほかのページへ">
   <div class="wrap pager__in">
-    <a class="pager__link pager__link--prev" href="now.html" rel="prev"><span class="pager__dir">← 前へ</span><span class="pager__label">いま</span><span class="pager__blurb">いま、いちばん前にあるもの。</span></a>
-    <a class="pager__link pager__link--next" href="charge.html" rel="next"><span class="pager__dir">次へ →</span><span class="pager__label">音と探究</span><span class="pager__blurb">「何の役に立つか」で測らない時間と、作曲講座の動画。</span></a>
+    <a class="pager__link pager__link--prev" href="works.html" rel="prev"><span class="pager__dir">← 前へ</span><span class="pager__label">つくったもの</span><span class="pager__blurb">つくったものを、星図にならべました。いま遊べるものもあります。</span></a>
+    <a class="pager__link pager__link--next" href="listen.html" rel="next"><span class="pager__dir">次へ →</span><span class="pager__label">聴く</span><span class="pager__blurb">物語の場面のためにつくった曲を、4つ。ボタンを押すと流れます。</span></a>
   </div>
 </nav>
 </main>
@@ -87,14 +87,14 @@
 <footer class="foot">
   <div class="wrap foot__in">
     <div class="foot__row">
-      <p class="foot__name">kazu</p>
+      <p class="foot__name">SILK<span class="foot__who">kazu</span></p>
       <nav class="foot__nav" aria-label="ページの一覧">
-        <a href="index.html">ホーム</a><a href="listen.html">聴く</a><a href="about.html">わたし</a><a href="journey.html">歩み</a><a href="works.html">つくったもの</a><a href="now.html">いま</a><a href="books.html">本</a><a href="charge.html">音と探究</a>
+        <a href="index.html">ホーム</a><a href="about.html">わたし</a><a href="journey.html">歩み</a><a href="works.html">つくったもの</a><a href="books.html">本</a><a href="listen.html">聴く</a><a href="charge.html">音と探究</a><a href="now.html">いま</a><a href="request.html">ご相談</a>
       </nav>
     </div>
     <div class="foot__row foot__row--sub">
       <p class="foot__note">作品の画面は、それぞれの公開ページから。絵は「数学ラボ3」のものです。</p>
-      <p class="foot__copy">© 2026 kazu</p>
+      <p class="foot__copy">© 2026 SILK / kazu</p>
     </div>
   </div>
 </footer>
