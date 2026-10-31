@@ -737,3 +737,86 @@ a:focus-visible { outline-color: var(--accent); }
   .try-card:hover,.try-card:focus-visible { transform: none; }
   .try-card:hover .try-card__shot img,.try-card:focus-visible .try-card__shot img { transform: none; }
 }
+
+/* ---- 2026-10-31 追加②：想い・生い立ち・道のり・活動・これから・ご相談（SILK） ---- */
+.topbar__who,.foot__who { font-size: 13px; font-weight: 500; color: var(--muted); margin-left: 10px; letter-spacing: .04em; }
+.topbar__nav a.topbar__ask { align-self: center; min-height: 40px; padding: 0 16px; border: 0; border-radius: 999px; background: var(--sun); color: #2b2a24; font-weight: 500; }
+.topbar__nav a.topbar__ask:hover,.topbar__nav a.topbar__ask[aria-current] { background: #f6c785; color: #2b2a24; }
+.btn[data-soon] { opacity: .55; cursor: not-allowed; }
+.btn[data-soon]:hover { transform: none; background: var(--sun); }
+
+/* 想い：三つの願いを、カードで */
+.wish__list { display: grid; gap: 12px; }
+.wish__item { display: flex; align-items: center; gap: 16px; padding: 18px 22px; border: 1px solid var(--line); border-radius: 18px; background: var(--card); font: 700 clamp(19px,2.3vw,24px)/1.6 var(--roman); }
+.wish__no { flex: none; display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--sun); color: #2b2a24; font-size: 16px; }
+.wish__prose { margin-top: 44px; }
+.wish__links { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+
+/* 生い立ち（わたし） */
+.roots-story { background: linear-gradient(140deg,#eeedf3,#e8edf0 60%,#f2eee6); }
+.journey__list--story { margin-top: 8px; }
+.journey__item a { color: var(--accent); }
+
+/* いま、していること */
+.acts { background: var(--soft); }
+.acts__list { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 20px; }
+.act { display: flex; flex-direction: column; gap: 8px; height: 100%; padding: 24px 22px 20px; border: 1px solid var(--line); border-radius: 20px; background: var(--card); color: var(--ink); text-decoration: none; transition: transform 220ms,box-shadow 220ms,border-color 220ms; }
+.act__icon { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 50%; background: #fde8d7; color: var(--accent); font-size: 18px; }
+.act__title { font: 700 20px/1.5 var(--roman); margin-top: 6px; }
+.act__line { font-size: 14px; line-height: 1.85; color: var(--muted); }
+.act__go { margin-top: auto; padding-top: 8px; font-size: 14px; font-weight: 500; color: var(--accent); }
+.act:hover,.act:focus-visible { transform: translateY(-3px); border-color: #e2c89c; box-shadow: 0 18px 30px -22px #5a4a2a66; }
+
+/* これから */
+.future { background: #eef3f6; }
+.future__big { font: 700 clamp(24px,3.2vw,36px)/1.6 var(--roman); margin-bottom: 28px; }
+
+/* ご相談への入口（ホームとご相談ページ） */
+.ask { padding: 88px 0; background: var(--paper); }
+.ask__in { text-align: center; background: #fff2dc; border-radius: 28px; padding: 56px 40px; }
+.ask__title { font: 700 clamp(24px,3vw,34px)/1.6 var(--roman); letter-spacing: .02em; margin-bottom: 16px; }
+.ask__in > p:not(.kicker) { max-width: 520px; margin-inline: auto; }
+.ask__cta { margin-top: 24px; }
+.ask__soon { margin-top: 12px; font-size: 13px; color: var(--muted); }
+
+/* 道のり：いま言えること・しんどい人へ */
+.motto__from:first-child { margin: 0 0 14px; font-size: 14px; }
+.care { padding-block: 56px; background: var(--paper); }
+.care__box { padding: 28px 32px; border: 1px solid #d5e2da; border-radius: 18px; background: #f1f6f3; }
+.care__title { font: 700 20px/1.6 var(--roman); margin-bottom: 10px; }
+.care__box p + p { margin-top: 10px; }
+.care__link a { display: inline-flex; align-items: center; min-height: 44px; color: #2f5a3f; font-weight: 500; }
+
+/* ご相談ページ */
+.req-cases { background: var(--soft); }
+.cases { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 20px; }
+.case { padding: 22px 24px 24px; border: 1px solid var(--line); border-radius: 20px; background: var(--card); }
+.case__worry { padding: 14px 18px; border-radius: 14px; background: #fdf0e2; font-weight: 500; }
+.case__worry::before { content: "「"; } .case__worry::after { content: "」"; }
+.case__arrow { text-align: center; color: var(--label); margin: 6px 0; }
+.case__made a { font: 700 18px/1.6 var(--roman); color: var(--accent); }
+.case__made span { display: block; font-size: 14px; color: var(--muted); margin-top: 2px; }
+.steps { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 20px; }
+.step { padding: 22px 22px 24px; border: 1px solid var(--line); border-radius: 20px; background: var(--card); }
+.step__no { display: grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; background: var(--sun); color: #2b2a24; font-weight: 700; }
+.step__title { font: 700 18px/1.6 var(--roman); margin: 14px 0 8px; }
+.step p { font-size: 14px; color: var(--muted); }
+.req-notes { background: var(--soft); }
+.notes li { padding: 20px 0; border-bottom: 1px dashed #d6cab2; }
+.notes li:first-child { border-top: 1px dashed #d6cab2; }
+.notes h3 { font: 700 18px/1.6 var(--roman); margin-bottom: 6px; }
+.hero--page .hero__cta { margin-top: 24px; }
+
+@media (max-width: 1000px) {
+  .acts__list,.steps { grid-template-columns: repeat(2,minmax(0,1fr)); }
+}
+@media (max-width: 600px) {
+  .acts__list,.steps,.cases { grid-template-columns: minmax(0,1fr); gap: 14px; }
+  .wish__item { padding: 14px 16px; gap: 12px; }
+  .ask { padding: 56px 0; }
+  .ask__in { padding: 40px 22px; border-radius: 22px; }
+  .care__box { padding: 22px 20px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .act:hover,.act:focus-visible { transform: none; }
+}
