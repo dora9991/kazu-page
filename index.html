@@ -3,15 +3,20 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>kazu — つくることで、「わかった」を灯す。</title>
-<meta name="description" content="数学の先生をしながら、学習ゲームや授業の道具、物語や曲をつくっている kazu のページです。">
-<meta property="og:title" content="kazu — つくることで、「わかった」を灯す。">
-<meta property="og:description" content="数学の先生をしながら、学習ゲームや授業の道具、物語や曲をつくっている kazu のページです。">
+<title>kazu のページ — 数学の先生の、つくったもの置き場</title>
+<meta name="description" content="数学の先生をしている kazu が、授業や職員室のためにつくったゲームや道具、曲を置いています。よかったら、さわってみてください。">
+<meta property="og:title" content="kazu のページ — 数学の先生の、つくったもの置き場">
+<meta property="og:description" content="数学の先生をしている kazu が、授業や職員室のためにつくったゲームや道具、曲を置いています。よかったら、さわってみてください。">
 <meta property="og:type" content="profile">
-<meta name="theme-color" content="#0c1732">
+<meta name="theme-color" content="#fbf7ef">
+<meta property="og:url" content="https://dora9991.github.io/kazu-page/">
+<meta property="og:image" content="https://dora9991.github.io/kazu-page/assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600&family=Shippori+Mincho:wght@500;600;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700&display=swap">
 <link rel="stylesheet" href="style.css">
 <script src="script.js" defer></script>
 </head>
@@ -33,32 +38,107 @@
 </header>
 
 <main id="main">
-<section class="hero" id="top">
-  <div class="hero__art" aria-hidden="true"><img src="assets/night.jpg" alt="" width="1672" height="941"></div>
+<section class="hero hero--home" id="top">
+  <div class="hero__art" aria-hidden="true"><img src="assets/dawn.jpg" alt="" width="1672" height="941"></div>
   <div class="wrap hero__in">
-    <p class="kicker">MATH TEACHER / MAKER</p>
-    <h1 class="hero__name">kazu</h1>
-    <p class="hero__statement"><span class="ph">つくることで、</span><span class="ph">「わかった」を灯す。</span></p>
-    <p class="hero__lead">数学の先生をしながら、ゲームや学びの道具、物語や曲をつくっています。教室の困りごとの隣で、手を動かすのが好きです。</p>
+    <p class="kicker">hello</p>
+    <h1 class="hero__hello"><span class="ph">こんにちは、</span><span class="ph"><span class="hero__me">kazu</span>です。</span></h1>
+    <p class="hero__lead">数学の先生をしています。教室や職員室で「ちょっと困ったな」と思ったら、ゲームや小さな道具にしてみる。そんなことを、楽しみながら続けています。音楽も好きです。</p>
     <p class="hero__cta">
-      <a class="btn btn--primary" href="listen.html">まず、音を聴く</a>
-      <a class="btn btn--ghost" href="works.html">つくってきたもの</a>
+      <a class="btn btn--primary" href="#try">さわってみる</a>
+      <a class="btn btn--ghost" href="about.html">どんな人？</a>
     </p>
-    <ul class="hero__news" aria-label="新しいこと">
-      <li><time class="hero__news-date">10.18</time><a href="works.html#w-math-hunter">数学ハンターが冒険RPGになりました</a></li>
-      <li><time class="hero__news-date">10.15</time><a href="works.html#w-suugaku-no-mori">小学生向け「すうがくの森」を公開しました</a></li>
-      <li><time class="hero__news-date">10.11</time><a href="works.html#w-ai-violinist">AIバイオリニストを公開しました</a></li>
-    </ul>
   </div>
-  <a class="hero__cue" href="#listen" aria-label="下へ進む"><span aria-hidden="true"></span></a>
-  <p class="hero__updated">2026年10月18日 更新</p>
+  <p class="hero__updated">2026年10月31日 更新</p>
+</section>
+
+<section class="sec sec--paper try" id="try" aria-labelledby="try-title">
+  <div class="wrap">
+    <header class="sec-head">
+      <p class="kicker">try</p>
+      <h2 class="sec-title" id="try-title">よかったら、さわってみてください</h2>
+      <p class="sec-lead">どれもブラウザでひらけます。生徒と、先生と、音楽が好きな人に。</p>
+    </header>
+    <ul class="try__list">
+      <li><a class="try-card" href="https://dora9991.github.io/math-labo-third/" target="_blank" rel="noopener">
+        <span class="try-card__shot"><img src="assets/works/math-labo-third.jpg" alt="" width="960" height="600" loading="lazy"></span>
+        <span class="try-card__body">
+          <span class="try-card__for">中学生と</span>
+          <span class="try-card__title">数学ラボ3</span>
+          <span class="try-card__line">空に浮かぶ天文台で、数学の「わかった」を光に変えて進む学習RPG。中1〜中3。</span>
+          <span class="try-card__go">あそんでみる<span aria-hidden="true"> ↗</span></span>
+        </span>
+      </a></li>
+      <li><a class="try-card" href="https://dora9991.github.io/math-hunter/" target="_blank" rel="noopener">
+        <span class="try-card__shot"><img src="assets/works/math-hunter.jpg" alt="" width="960" height="600" loading="lazy"></span>
+        <span class="try-card__body">
+          <span class="try-card__for">中学生と</span>
+          <span class="try-card__title">数学ハンター</span>
+          <span class="try-card__line">数式を解いて狩りをし、村を復興する冒険RPG。スマホでも遊べます。</span>
+          <span class="try-card__go">あそんでみる<span aria-hidden="true"> ↗</span></span>
+        </span>
+      </a></li>
+      <li><a class="try-card" href="https://dora9991.github.io/suugaku-no-mori/" target="_blank" rel="noopener">
+        <span class="try-card__shot"><img src="assets/works/suugaku-no-mori.jpg" alt="" width="960" height="600" loading="lazy"></span>
+        <span class="try-card__body">
+          <span class="try-card__for try-card__for--kids">小学生と</span>
+          <span class="try-card__title">すうがくの森</span>
+          <span class="try-card__line">算数をとくと、森のキャンプがにぎやかになる。1日10分で「きょうはここまで」。</span>
+          <span class="try-card__go">あそんでみる<span aria-hidden="true"> ↗</span></span>
+        </span>
+      </a></li>
+      <li><a class="try-card" href="https://dora9991.github.io/kantan-seiseki/" target="_blank" rel="noopener">
+        <span class="try-card__shot"><img src="assets/works/kantan-seiseki.jpg" alt="" width="960" height="600" loading="lazy"></span>
+        <span class="try-card__body">
+          <span class="try-card__for try-card__for--teacher">先生に</span>
+          <span class="try-card__title">かんたん成績</span>
+          <span class="try-card__line">成績つけの手間を、少し軽く。名簿も成績も、パソコンの外には出ません。</span>
+          <span class="try-card__go">つかってみる<span aria-hidden="true"> ↗</span></span>
+        </span>
+      </a></li>
+      <li><a class="try-card" href="https://dora9991.github.io/mendan-scheduler/" target="_blank" rel="noopener">
+        <span class="try-card__shot"><img src="assets/works/mendan-scheduler.jpg" alt="" width="960" height="600" loading="lazy"></span>
+        <span class="try-card__body">
+          <span class="try-card__for try-card__for--teacher">先生に</span>
+          <span class="try-card__title">面談スケジューラ</span>
+          <span class="try-card__line">希望を貼りつけるだけで、面談の日程を組みます。ネットにつながなくても動きます。</span>
+          <span class="try-card__go">つかってみる<span aria-hidden="true"> ↗</span></span>
+        </span>
+      </a></li>
+      <li><a class="try-card" href="https://dora9991.github.io/ai-violinist/" target="_blank" rel="noopener">
+        <span class="try-card__shot"><img src="assets/works/ai-violinist.jpg" alt="" width="960" height="600" loading="lazy"></span>
+        <span class="try-card__body">
+          <span class="try-card__for try-card__for--music">曲をつくる人に</span>
+          <span class="try-card__title">AIバイオリニスト</span>
+          <span class="try-card__line">曲を入れると、AI がバイオリンのパートを書き足します。曲はブラウザの中だけで処理されます。</span>
+          <span class="try-card__go">つかってみる<span aria-hidden="true"> ↗</span></span>
+        </span>
+      </a></li>
+    </ul>
+    <p class="try__more"><a href="works.html">ほかにも、いろいろつくっています<span aria-hidden="true"> →</span></a></p>
+  </div>
+</section>
+
+<section class="sec lately" id="lately" aria-labelledby="lately-title">
+  <div class="wrap narrow">
+    <header class="sec-head">
+      <p class="kicker">lately</p>
+      <h2 class="sec-title" id="lately-title">このごろ</h2>
+    </header>
+    <ul class="lately__list">
+      <li><time class="lately__date" datetime="2026-10-18">10.18</time><a href="works.html#w-math-hunter">数学ハンターが、村を復興する冒険RPGに育ちました。</a></li>
+      <li><time class="lately__date" datetime="2026-10-15">10.15</time><a href="works.html#w-suugaku-no-mori">小学生むけの「すうがくの森」、最初の版を出しました。</a></li>
+      <li><time class="lately__date" datetime="2026-10-11">10.11</time><a href="works.html#w-ai-violinist">「AIバイオリニスト」を公開しました。少しずつ直しています。</a></li>
+    </ul>
+    <p class="lately__more"><a href="now.html">いま夢中になっているもの<span aria-hidden="true"> →</span></a></p>
+  </div>
 </section>
 
 <section class="sec sec--night listen" id="listen" aria-labelledby="listen-title">
   <div class="wrap">
     <header class="sec-head">
-      <p class="kicker">LISTEN</p>
-      <h2 class="sec-title" id="listen-title">まず、音から。</h2>
+      <p class="kicker">listen</p>
+      <h2 class="sec-title" id="listen-title">ひと息に、1曲どうぞ。</h2>
       <p class="sec-lead">ゲームの物語の場面のためにつくった曲です（AI の力を借りています）。ボタンを押すと流れます。</p>
     </header>
     <ol class="tracks">
@@ -78,56 +158,49 @@
 <section class="sec sec--paper gate" id="gate" aria-labelledby="gate-title">
   <div class="wrap">
     <header class="sec-head">
-      <p class="kicker">CONTENTS</p>
-      <h2 class="sec-title" id="gate-title">どこから見ますか。</h2>
-      <p class="sec-lead">上のタグからも、同じところへ行けます。</p>
+      <p class="kicker">pages</p>
+      <h2 class="sec-title" id="gate-title">ほかのページ</h2>
+      <p class="sec-lead">気になるところから、どうぞ。上のタグからも行けます。</p>
     </header>
     <ul class="gate__list">
       <li class="gate__item"><a class="gate__card" href="listen.html">
-        <span class="gate__no" aria-hidden="true">01</span>
-        <span class="gate__kicker">LISTEN</span>
+        <span class="gate__kicker">listen</span>
         <span class="gate__label">聴く</span>
         <span class="gate__blurb">物語の場面のためにつくった曲を、4つ。ボタンを押すと流れます。</span>
         <span class="gate__go" aria-hidden="true">→</span>
       </a></li>
       <li class="gate__item"><a class="gate__card" href="about.html">
-        <span class="gate__no" aria-hidden="true">02</span>
-        <span class="gate__kicker">ABOUT</span>
+        <span class="gate__kicker">about</span>
         <span class="gate__label">わたし</span>
         <span class="gate__blurb">どんな人か。根っこにあるものと、大切にしていること。</span>
         <span class="gate__go" aria-hidden="true">→</span>
       </a></li>
       <li class="gate__item"><a class="gate__card" href="journey.html">
-        <span class="gate__no" aria-hidden="true">03</span>
-        <span class="gate__kicker">JOURNEY</span>
+        <span class="gate__kicker">journey</span>
         <span class="gate__label">歩み</span>
         <span class="gate__blurb">島の学校に移った2021年ごろから、いままで。</span>
         <span class="gate__go" aria-hidden="true">→</span>
       </a></li>
       <li class="gate__item"><a class="gate__card" href="works.html">
-        <span class="gate__no" aria-hidden="true">04</span>
-        <span class="gate__kicker">WORKS</span>
+        <span class="gate__kicker">works</span>
         <span class="gate__label">つくったもの</span>
-        <span class="gate__blurb">25の作品を、星図で。いま遊べるものもあります。</span>
+        <span class="gate__blurb">つくったものを、星図にならべました。いま遊べるものもあります。</span>
         <span class="gate__go" aria-hidden="true">→</span>
       </a></li>
       <li class="gate__item"><a class="gate__card" href="now.html">
-        <span class="gate__no" aria-hidden="true">05</span>
-        <span class="gate__kicker">NOW</span>
+        <span class="gate__kicker">now</span>
         <span class="gate__label">いま</span>
-        <span class="gate__blurb">いま、いちばん前にあるもの。</span>
+        <span class="gate__blurb">いま、夢中になっているもの。</span>
         <span class="gate__go" aria-hidden="true">→</span>
       </a></li>
       <li class="gate__item"><a class="gate__card" href="books.html">
-        <span class="gate__no" aria-hidden="true">06</span>
-        <span class="gate__kicker">BOOKS</span>
+        <span class="gate__kicker">books</span>
         <span class="gate__label">本</span>
         <span class="gate__blurb">出している本と、いま書いている原稿。</span>
         <span class="gate__go" aria-hidden="true">→</span>
       </a></li>
       <li class="gate__item"><a class="gate__card" href="charge.html">
-        <span class="gate__no" aria-hidden="true">07</span>
-        <span class="gate__kicker">CHARGE</span>
+        <span class="gate__kicker">charge</span>
         <span class="gate__label">音と探究</span>
         <span class="gate__blurb">「何の役に立つか」で測らない時間と、作曲講座の動画。</span>
         <span class="gate__go" aria-hidden="true">→</span>
@@ -136,23 +209,11 @@
   </div>
 </section>
 
-<section class="numbers" aria-label="数で見る">
-  <div class="wrap">
-    <ul class="numbers__list">
-      <li class="numbers__item"><span class="numbers__n">34<small></small></span><span class="numbers__label">公開しているアプリ・教材</span><span class="numbers__note">GitHub Pages（2026年10月）</span></li>
-      <li class="numbers__item"><span class="numbers__n">297<small>時間</small></span><span class="numbers__label">中学3年分の授業の計画</span><span class="numbers__note">授業ナビ（つくっている途中）</span></li>
-      <li class="numbers__item"><span class="numbers__n">約1,800<small>件</small></span><span class="numbers__label">記録に残っている、AI への指示</span><span class="numbers__note">『知見集』の材料</span></li>
-      <li class="numbers__item"><span class="numbers__n">1,530<small>人</small></span><span class="numbers__label">作曲チャンネルの登録者</span><span class="numbers__note">YouTube（いまはお休み中）</span></li>
-    </ul>
-  </div>
-</section>
-
-<section class="closing" aria-labelledby="closing-title">
-  <div class="closing__art" aria-hidden="true"><img src="assets/dawn.jpg" alt="" width="1672" height="941" loading="lazy"></div>
+<section class="closing closing--plain" aria-labelledby="closing-title">
   <div class="wrap narrow closing__in">
-    <h2 class="closing__title" id="closing-title"><span class="ph">ただいま、</span><span class="ph">の朝。</span></h2>
+    <h2 class="closing__title" id="closing-title"><span class="ph">使ってもらえたら、</span><span class="ph">うれしいです。</span></h2>
     <p>つくったものが、だれかの手にわたって、使われて、直されていく。そこまでが「つくる」だと思っています。</p>
-    <ul class="closing__links"><li><a class="btn" href="https://dora9991.github.io/math-hunter/" target="_blank" rel="noopener">数学ハンターをあそぶ<span aria-hidden="true"> ↗</span></a></li><li><a class="btn" href="https://dora9991.github.io/math-labo-third/" target="_blank" rel="noopener">数学ラボ3 をあそぶ<span aria-hidden="true"> ↗</span></a></li><li><a class="btn" href="https://dora9991.github.io/ai-violinist/" target="_blank" rel="noopener">AIバイオリニストをつかう<span aria-hidden="true"> ↗</span></a></li><li><a class="btn" href="https://github.com/dora9991" target="_blank" rel="noopener">つくったもののコード（GitHub）<span aria-hidden="true"> ↗</span></a></li></ul>
+    <ul class="closing__links"><li><a class="btn" href="works.html">つくったものを、ぜんぶ見る</a></li><li><a class="btn" href="https://github.com/dora9991" target="_blank" rel="noopener">コードも置いています（GitHub）<span aria-hidden="true"> ↗</span></a></li></ul>
   </div>
 </section>
 </main>
